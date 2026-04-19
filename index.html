@@ -1338,6 +1338,236 @@
             object-fit: cover;
         }
 
+        /* DIA DAS MAES - SECAO BRINDE */
+        .maes-section {
+            padding: 70px 0;
+            background: linear-gradient(135deg, #fff5f7 0%, #fce4ec 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .maes-section::before {
+            content: '';
+            position: absolute;
+            top: -60px;
+            right: -60px;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(233,30,99,0.08) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .maes-section::after {
+            content: '';
+            position: absolute;
+            bottom: -80px;
+            left: -80px;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(233,30,99,0.06) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .maes-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .maes-tag {
+            display: inline-block;
+            background: linear-gradient(135deg, #e91e63 0%, #c2185b 100%);
+            color: white;
+            padding: 6px 20px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+
+        .maes-header h2 {
+            font-size: 36px;
+            font-weight: bold;
+            color: #1a1a1a;
+            margin-bottom: 12px;
+            line-height: 1.2;
+        }
+
+        .maes-header h2 span {
+            color: #e91e63;
+        }
+
+        .maes-header p {
+            font-size: 17px;
+            color: #555;
+            max-width: 560px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        .maes-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: center;
+        }
+
+        .maes-brindes-title {
+            font-size: 13px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #e91e63;
+            margin-bottom: 20px;
+        }
+
+        .maes-brindes-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-bottom: 32px;
+        }
+
+        .maes-brinde-item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            background: white;
+            padding: 18px 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 12px rgba(233,30,99,0.08);
+            border-left: 4px solid #e91e63;
+            transition: transform 0.25s, box-shadow 0.25s;
+        }
+
+        .maes-brinde-item:hover {
+            transform: translateX(4px);
+            box-shadow: 0 4px 20px rgba(233,30,99,0.14);
+        }
+
+        .maes-brinde-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, #fce4ec 0%, #f8bbd0 100%);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            color: #e91e63;
+            flex-shrink: 0;
+        }
+
+        .maes-brinde-info strong {
+            display: block;
+            font-size: 15px;
+            color: #1a1a1a;
+            margin-bottom: 3px;
+        }
+
+        .maes-brinde-info span {
+            font-size: 13px;
+            color: #777;
+        }
+
+        .maes-cta-box {
+            background: white;
+            border-radius: 16px;
+            padding: 36px;
+            box-shadow: 0 4px 24px rgba(233,30,99,0.1);
+            text-align: center;
+            border: 2px solid #f8bbd0;
+            position: relative;
+            z-index: 1;
+        }
+
+        .maes-cta-icon {
+            font-size: 56px;
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .maes-cta-box h3 {
+            font-size: 22px;
+            font-weight: bold;
+            color: #1a1a1a;
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
+
+        .maes-cta-box p {
+            font-size: 15px;
+            color: #666;
+            margin-bottom: 24px;
+            line-height: 1.6;
+        }
+
+        .maes-price-block {
+            background: linear-gradient(135deg, #fff5f7 0%, #fce4ec 100%);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 24px;
+        }
+
+        .maes-price-label {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #e91e63;
+            font-weight: bold;
+            margin-bottom: 6px;
+        }
+
+        .maes-price-value {
+            font-size: 34px;
+            font-weight: bold;
+            color: #1a1a1a;
+            line-height: 1;
+            margin-bottom: 4px;
+        }
+
+        .maes-price-installment {
+            font-size: 13px;
+            color: #777;
+        }
+
+        .btn-maes {
+            width: 100%;
+            padding: 16px 24px;
+            background: linear-gradient(135deg, #e91e63 0%, #c2185b 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.25s;
+            letter-spacing: 0.5px;
+            box-shadow: 0 4px 16px rgba(233,30,99,0.3);
+        }
+
+        .btn-maes:hover {
+            background: linear-gradient(135deg, #c2185b 0%, #ad1457 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(233,30,99,0.4);
+        }
+
+        .maes-badge-entrega {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 16px;
+            font-size: 13px;
+            color: #777;
+        }
+
+        .maes-badge-entrega i {
+            color: #059669;
+        }
+
         /* RESPONSIVO */
         @media (max-width: 768px) {
             .hero-content,
@@ -1371,6 +1601,18 @@
             .cart-layout,
             .checkout-layout {
                 grid-template-columns: 1fr;
+            }
+
+            .maes-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .maes-header h2 {
+                font-size: 26px;
+            }
+
+            .maes-cta-box {
+                padding: 24px 20px;
             }
 
             .form-row {
@@ -1676,6 +1918,83 @@
                         <div class="review-title">Muito bom, apenas um detalhe</div>
                         <div class="review-text">A máquina é excelente, mas o ciclo de secagem poderia ser um pouco mais rápido. Mesmo assim, estou muito satisfeita.</div>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DIA DAS MAES - BRINDE ESPECIAL -->
+        <section class="maes-section" id="dia-das-maes">
+            <div class="container">
+
+                <div class="maes-header">
+                    <div class="maes-tag">&#10084; Dia das M&atilde;es</div>
+                    <h2>O Presente que <span>Facilita a Vida</span> de Verdade</h2>
+                    <p>Dia das M&atilde;es &eacute; a ocasi&atilde;o perfeita para presentear com algo que transforma a rotina. A Lava e Seca LG ThinQ &eacute; o presente que toda m&atilde;e merece &mdash; pr&aacute;tico, inteligente e cheio de cuidado.</p>
+                </div>
+
+                <div class="maes-layout">
+
+                    <!-- BRINDES -->
+                    <div>
+                        <p class="maes-brindes-title">&#127873; Compre agora e ganhe o kit brinde exclusivo</p>
+                        <ul class="maes-brindes-list">
+                            <li class="maes-brinde-item">
+                                <div class="maes-brinde-icon">
+                                    <i class="fas fa-soap"></i>
+                                </div>
+                                <div class="maes-brinde-info">
+                                    <strong>Kit Lavanderia Premium</strong>
+                                    <span>Sabão, amaciante e tira-manchas selecionados especialmente para a LG ThinQ</span>
+                                </div>
+                            </li>
+                            <li class="maes-brinde-item">
+                                <div class="maes-brinde-icon">
+                                    <i class="fas fa-box-open"></i>
+                                </div>
+                                <div class="maes-brinde-info">
+                                    <strong>Cesto Organizador</strong>
+                                    <span>Cesto de roupa premium para manter a lavanderia sempre organizada e com estilo</span>
+                                </div>
+                            </li>
+                            <li class="maes-brinde-item">
+                                <div class="maes-brinde-icon">
+                                    <i class="fas fa-ticket-alt"></i>
+                                </div>
+                                <div class="maes-brinde-info">
+                                    <strong>Voucher de Limpeza Dom&eacute;stica</strong>
+                                    <span>1 sess&atilde;o de limpeza profissional para estrear a m&aacute;quina com tudo organizado</span>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <p style="font-size: 13px; color: #999; border-top: 1px solid #f8bbd0; padding-top: 16px;">
+                            <i class="fas fa-info-circle" style="color: #e91e63;"></i>
+                            &nbsp;Brindes v&aacute;lidos para compras realizadas at&eacute; o Dia das M&atilde;es. Sujeito a disponibilidade de estoque.
+                        </p>
+                    </div>
+
+                    <!-- CTA BOX -->
+                    <div class="maes-cta-box">
+                        <span class="maes-cta-icon">&#128144;</span>
+                        <h3>Surpreenda a sua m&atilde;e com tecnologia e praticidade</h3>
+                        <p>Al&eacute;m do desconto exclusivo de 29%, sua compra vem acompanhada do kit brinde especial de Dia das M&atilde;es, sem custo adicional.</p>
+
+                        <div class="maes-price-block">
+                            <div class="maes-price-label">Promo&ccedil;&atilde;o Dia das M&atilde;es</div>
+                            <div class="maes-price-value">R$ 3.899,00</div>
+                            <div class="maes-price-installment">12x de R$ 324,92 sem juros &bull; ou &agrave; vista com desconto</div>
+                        </div>
+
+                        <button class="btn-maes" onclick="addToCartAndGo()">
+                            <i class="fas fa-gift"></i>&nbsp; GARANTIR MEU PRESENTE + BRINDES
+                        </button>
+
+                        <div class="maes-badge-entrega">
+                            <i class="fas fa-truck"></i>
+                            <span>Entrega r&aacute;pida &bull; Frete para todo o Brasil</span>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
