@@ -1,0 +1,2667 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lava e Seca LG ThinQ Branca - EletroShop</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            background-color: #001f3f; /* Azul escuro como no logo */
+            padding: 12px 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .navbar-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            cursor: pointer;
+        }
+
+        .logo-icon {
+            color: #ff8c00; /* Laranja como no logo */
+            font-size: 28px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 24px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: #ff8c00; /* Laranja como no logo */
+        }
+
+        .btn-comprar {
+            background-color: #ff8c00; /* Laranja como no logo */
+            color: white;
+            padding: 10px 20px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.2s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-comprar:hover {
+            background-color: #e67e00; /* Laranja mais escuro */
+        }
+
+        .cart-icon {
+            font-size: 24px;
+            cursor: pointer;
+            position: relative;
+            color: white;
+            transition: transform 0.2s;
+        }
+
+        .cart-icon:hover {
+            transform: scale(1.1);
+        }
+
+        .cart-badge {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background-color: #ef4444;
+            color: white;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        /* CONTAINER */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 16px;
+        }
+
+        /* PÁGINAS */
+        .page {
+            display: none;
+        }
+
+        .page.active {
+            display: block;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-size: 48px;
+            margin-bottom: 16px;
+            font-weight: bold;
+        }
+
+        .hero-text p {
+            font-size: 18px;
+            margin-bottom: 24px;
+            opacity: 0.95;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            margin-bottom: 16px;
+        }
+
+        .price-hero {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 16px;
+        }
+
+        .price-original {
+            text-decoration: line-through;
+            opacity: 0.7;
+            font-size: 24px;
+            margin-right: 12px;
+        }
+
+        .discount-badge {
+            background-color: #ef4444;
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 12px;
+            margin-top: 24px;
+        }
+
+        .btn-primary {
+            background-color: #059669;
+            color: white;
+            padding: 14px 32px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            flex: 1;
+        }
+
+        .btn-primary:hover {
+            background-color: #047857;
+        }
+
+        .btn-secondary {
+            background-color: rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 14px 32px;
+            border: 2px solid white;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.2s;
+            flex: 1;
+        }
+
+        .btn-secondary:hover {
+            background-color: white;
+            color: #1e3a8a;
+        }
+
+        .hero-image {
+            position: relative;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            filter: drop-shadow(0 10px 30px rgba(0,0,0,0.2));
+        }
+
+        /* SEÇÃO DE VÍDEO ANÚNCIO */
+        .video-section {
+            padding: 60px 0;
+            background: white;
+        }
+
+        .section-title {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 12px;
+            color: #000;
+        }
+
+        .section-subtitle {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 40px;
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-bottom: 40px;
+        }
+
+        .video-card {
+            background: #f5f5f5;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .video-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+        }
+
+        .video-placeholder {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .video-placeholder::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.3);
+            transition: background 0.3s;
+        }
+
+        .video-card:hover .video-placeholder::before {
+            background: rgba(0,0,0,0.5);
+        }
+
+        .play-button {
+            width: 80px;
+            height: 80px;
+            background-color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            color: #2563eb;
+            position: relative;
+            z-index: 1;
+            transition: transform 0.3s;
+        }
+
+        .video-card:hover .play-button {
+            transform: scale(1.1);
+        }
+
+        .video-title {
+            padding: 16px;
+            font-weight: bold;
+            font-size: 16px;
+            color: #000;
+        }
+
+        .video-description {
+            padding: 0 16px 16px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .video-player {
+            aspect-ratio: 16 / 9;
+            background: #000;
+            border-radius: 8px 8px 0 0;
+            cursor: pointer;
+        }
+
+        /* GALERIA DE FOTOS COM ZOOM */
+        .gallery-section {
+            padding: 60px 0;
+            background: white;
+        }
+
+        .gallery-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: start;
+            margin-bottom: 40px;
+        }
+
+        .gallery-left {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .gallery-thumbnails-wrapper {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+        }
+
+        .gallery-main {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            background: #f5f5f5;
+            aspect-ratio: 1;
+            order: 2;
+        }
+
+        .gallery-main-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            cursor: zoom-in;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-main:hover .gallery-main-image {
+            transform: scale(1.5);
+        }
+
+        .zoom-lens {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 150px;
+            height: 150px;
+            border: 2px solid #ff8c00;
+            background: rgba(255, 140, 0, 0.1);
+            display: none;
+            border-radius: 4px;
+            pointer-events: none;
+        }
+
+        .gallery-main:hover .zoom-lens {
+            display: block;
+        }
+
+        .zoom-result {
+            position: absolute;
+            top: 0;
+            right: -220px;
+            width: 200px;
+            height: 200px;
+            border: 1px solid #ddd;
+            overflow: hidden;
+            background: white;
+            border-radius: 4px;
+            display: none;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .zoom-result img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .gallery-main:hover .zoom-result {
+            display: block;
+        }
+
+        .gallery-thumbnails {
+            display: contents;
+        }
+
+        .gallery-thumbnail {
+            aspect-ratio: 1;
+            border-radius: 6px;
+            overflow: hidden;
+            cursor: pointer;
+            border: 3px solid transparent;
+            transition: all 0.3s ease;
+            background: #f5f5f5;
+        }
+
+        .gallery-thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-thumbnail:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-thumbnail.active {
+            border-color: #ff8c00;
+        }
+
+        .gallery-info {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            grid-column: 1 / -1;
+            margin-top: 20px;
+        }
+
+        .gallery-info h2 {
+            font-size: 24px;
+            font-weight: bold;
+            color: #000;
+        }
+
+        .gallery-info p {
+            color: #666;
+            line-height: 1.8;
+        }
+
+        .gallery-specs {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #ff8c00;
+        }
+
+        .gallery-specs h4 {
+            font-size: 14px;
+            font-weight: bold;
+            color: #000;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+        }
+
+        .gallery-specs ul {
+            list-style: none;
+        }
+
+        .gallery-specs li {
+            padding: 8px 0;
+            font-size: 14px;
+            color: #666;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .gallery-specs li:last-child {
+            border-bottom: none;
+        }
+
+        .gallery-specs strong {
+            color: #000;
+            display: inline-block;
+            width: 120px;
+        }
+
+        /* ESPECIFICAÇÕES TÉCNICAS */
+        .specs-section {
+            padding: 60px 0;
+            background: #f8f9fa;
+        }
+
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+        }
+
+        .specs-image {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 400px;
+        }
+
+        .specs-image img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        .specs-content h3 {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 24px;
+            color: #000;
+        }
+
+        .specs-list {
+            list-style: none;
+        }
+
+        .specs-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid #e5e7eb;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+
+        .specs-list li:last-child {
+            border-bottom: none;
+        }
+
+        .specs-list i {
+            color: #2563eb;
+            margin-top: 4px;
+            flex-shrink: 0;
+        }
+
+        .specs-list strong {
+            color: #000;
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .specs-list span {
+            color: #666;
+            font-size: 14px;
+        }
+
+        /* AVALIAÇÕES */
+        .reviews-section {
+            padding: 60px 0;
+            background: #f8f9fa;
+        }
+
+        .rating-summary {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 40px;
+            margin-bottom: 40px;
+            background: white;
+            padding: 32px;
+            border-radius: 8px;
+        }
+
+        .rating-box {
+            text-align: center;
+        }
+
+        .big-rating {
+            font-size: 64px;
+            font-weight: bold;
+            color: #ffc107;
+            margin-bottom: 8px;
+        }
+
+        .stars-display {
+            font-size: 24px;
+            color: #ffc107;
+            margin-bottom: 12px;
+        }
+
+        .rating-text {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .rating-bars {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .rating-bar {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .rating-bar-label {
+            width: 60px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .rating-bar-fill {
+            flex: 1;
+            height: 8px;
+            background-color: #e5e7eb;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .rating-bar-progress {
+            height: 100%;
+            background-color: #ffc107;
+            border-radius: 4px;
+        }
+
+        .rating-bar-count {
+            width: 50px;
+            text-align: right;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .review-card {
+            background: white;
+            padding: 24px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .review-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .review-avatar {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        .review-name {
+            font-weight: bold;
+            color: #000;
+        }
+
+        .review-date {
+            font-size: 12px;
+            color: #999;
+        }
+
+        .review-stars {
+            color: #ffc107;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+
+        .review-title {
+            font-weight: bold;
+            color: #000;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+
+        .review-text {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        /* DOWNLOADS */
+        .downloads-section {
+            padding: 60px 0;
+            background: white;
+        }
+
+        .downloads-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .download-card {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            padding: 32px;
+            border-radius: 8px;
+            text-align: center;
+            border: 2px solid #bfdbfe;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .download-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 16px rgba(37, 99, 235, 0.15);
+            border-color: #2563eb;
+        }
+
+        .download-icon {
+            font-size: 48px;
+            color: #2563eb;
+            margin-bottom: 16px;
+        }
+
+        .download-title {
+            font-weight: bold;
+            font-size: 16px;
+            color: #000;
+            margin-bottom: 8px;
+        }
+
+        .download-description {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 16px;
+        }
+
+        .download-btn {
+            background-color: #2563eb;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.2s;
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        .download-btn:hover {
+            background-color: #1d4ed8;
+        }
+
+        /* CTA FINAL */
+        .cta-section {
+            padding: 60px 0;
+            background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .cta-content h2 {
+            font-size: 36px;
+            margin-bottom: 16px;
+            font-weight: bold;
+        }
+
+        .cta-content p {
+            font-size: 18px;
+            margin-bottom: 32px;
+            opacity: 0.95;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-cta-primary {
+            background-color: #059669;
+            color: white;
+            padding: 16px 40px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .btn-cta-primary:hover {
+            background-color: #047857;
+        }
+
+        /* FOOTER */
+        .footer {
+            background-color: #0f172a;
+            color: #999;
+            padding: 40px 0;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        /* CARRINHO */
+        .cart-page {
+            padding: 24px 0;
+        }
+
+        .cart-header {
+            background: white;
+            padding: 16px;
+            border-radius: 4px;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .cart-header h2 {
+            font-size: 20px;
+        }
+
+        .back-btn {
+            background: none;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+            color: #2563eb;
+        }
+
+        .cart-layout {
+            display: grid;
+            grid-template-columns: 1fr 320px;
+            gap: 16px;
+        }
+
+        .cart-items {
+            background: white;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .cart-item {
+            display: grid;
+            grid-template-columns: 80px 1fr auto;
+            gap: 16px;
+            padding: 16px;
+            border-bottom: 1px solid #f5f5f5;
+            align-items: start;
+        }
+
+        .cart-item:last-child {
+            border-bottom: none;
+        }
+
+        .cart-item-image {
+            width: 80px;
+            height: 80px;
+            background: #f5f5f5;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .cart-item-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .cart-item-details h3 {
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+
+        .cart-item-price {
+            color: #059669;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .quantity-control {
+            display: flex;
+            align-items: center;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            width: fit-content;
+            margin-bottom: 8px;
+        }
+
+        .quantity-control button {
+            background: none;
+            border: none;
+            width: 28px;
+            height: 28px;
+            cursor: pointer;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .quantity-control span {
+            width: 40px;
+            text-align: center;
+            border-left: 1px solid #ddd;
+            border-right: 1px solid #ddd;
+            font-size: 14px;
+        }
+
+        .remove-btn {
+            color: #2563eb;
+            font-size: 12px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .cart-item-actions {
+            text-align: right;
+        }
+
+        .cart-item-total {
+            font-weight: bold;
+            font-size: 16px;
+            color: #000;
+            margin-bottom: 8px;
+        }
+
+        .cart-summary {
+            background: white;
+            border-radius: 4px;
+            padding: 16px;
+            height: fit-content;
+            position: sticky;
+            top: 80px;
+        }
+
+        .summary-title {
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+
+        .summary-row {
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+            margin-bottom: 12px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid #f5f5f5;
+        }
+
+        .summary-row.total {
+            border-bottom: none;
+            font-size: 18px;
+            font-weight: bold;
+            color: #000;
+        }
+
+        .summary-row.total .value {
+            color: #059669;
+        }
+
+        .checkout-btn {
+            width: 100%;
+            padding: 12px;
+            background-color: #3b82f6;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 12px;
+            transition: background-color 0.2s;
+        }
+
+        .checkout-btn:hover {
+            background-color: #2563eb;
+        }
+
+        .empty-cart {
+            text-align: center;
+            padding: 60px 20px;
+            background: white;
+            border-radius: 4px;
+        }
+
+        .empty-cart-icon {
+            font-size: 64px;
+            color: #ddd;
+            margin-bottom: 16px;
+        }
+
+        /* CHECKOUT */
+        .checkout-page {
+            padding: 24px 0;
+        }
+
+        .checkout-layout {
+            display: grid;
+            grid-template-columns: 1fr 320px;
+            gap: 16px;
+        }
+
+        .checkout-section {
+            background: white;
+            border-radius: 4px;
+            padding: 24px;
+            margin-bottom: 16px;
+        }
+
+        .section-title-checkout {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #3b82f6;
+        }
+
+        .form-group {
+            margin-bottom: 16px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 6px;
+            color: #333;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+            font-family: inherit;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #2563eb;
+            box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.1);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .payment-methods {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .payment-method {
+            display: flex;
+            align-items: center;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .payment-method:hover {
+            border-color: #2563eb;
+            background: #f9f9f9;
+        }
+
+        .payment-method input[type="radio"] {
+            margin-right: 12px;
+            cursor: pointer;
+            width: 18px;
+            height: 18px;
+        }
+
+        .payment-method-label {
+            flex: 1;
+            cursor: pointer;
+        }
+
+        .payment-method-title {
+            font-weight: bold;
+            font-size: 14px;
+            margin-bottom: 4px;
+        }
+
+        .payment-method-desc {
+            font-size: 12px;
+            color: #666;
+        }
+
+        .payment-details {
+            display: none;
+            margin-top: 16px;
+            padding-top: 16px;
+            border-top: 1px solid #ddd;
+        }
+
+        .payment-details.show {
+            display: block;
+        }
+
+        .checkout-summary {
+            background: white;
+            border-radius: 4px;
+            padding: 16px;
+            height: fit-content;
+            position: sticky;
+            top: 80px;
+        }
+
+        .summary-item {
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+            margin-bottom: 12px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid #f5f5f5;
+        }
+
+        .summary-item.total {
+            border-bottom: none;
+            font-size: 16px;
+            font-weight: bold;
+            color: #000;
+        }
+
+        .summary-item.total .value {
+            color: #059669;
+        }
+
+        .finish-btn {
+            width: 100%;
+            padding: 12px;
+            background-color: #059669;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 12px;
+            transition: background-color 0.2s;
+        }
+
+        .finish-btn:hover {
+            background-color: #047857;
+        }
+
+        .finish-btn:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+
+        /* SUCCESS PAGE */
+        .success-page {
+            padding: 60px 0;
+        }
+
+        .success-container {
+            background: white;
+            border-radius: 4px;
+            padding: 40px;
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .success-icon {
+            font-size: 80px;
+            color: #059669;
+            margin-bottom: 20px;
+            animation: bounce 0.6s ease;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .success-title {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 12px;
+            color: #000;
+        }
+
+        .success-message {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 24px;
+        }
+
+        .order-number {
+            background: #f5f5f5;
+            padding: 16px;
+            border-radius: 4px;
+            margin-bottom: 24px;
+            font-size: 14px;
+        }
+
+        .order-number-label {
+            color: #666;
+            margin-bottom: 4px;
+        }
+
+        .order-number-value {
+            font-size: 24px;
+            font-weight: bold;
+            color: #3b82f6;
+        }
+
+        .success-details {
+            background: #f5f5f5;
+            padding: 16px;
+            border-radius: 4px;
+            margin-bottom: 24px;
+            text-align: left;
+            font-size: 14px;
+        }
+
+        .success-details-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 12px;
+        }
+
+        .success-details-row:last-child {
+            margin-bottom: 0;
+        }
+
+        .success-buttons {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+        }
+
+        .btn-continue {
+            padding: 12px 24px;
+            background-color: #3b82f6;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .btn-continue:hover {
+            background-color: #2563eb;
+        }
+
+        /* MODAL DE VÍDEO */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.8);
+            animation: fadeIn 0.3s;
+        }
+
+        .modal.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .modal-content {
+            background-color: #000;
+            position: relative;
+            max-width: 900px;
+            width: 90%;
+            aspect-ratio: 16 / 9;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .close-modal {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            font-size: 32px;
+            color: white;
+            cursor: pointer;
+            z-index: 10;
+            background: rgba(0,0,0,0.5);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+        }
+
+        .modal-video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* DIA DAS MAES - SECAO BRINDE */
+        .maes-section {
+            padding: 70px 0;
+            background: linear-gradient(135deg, #fff5f7 0%, #fce4ec 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .maes-section::before {
+            content: '';
+            position: absolute;
+            top: -60px;
+            right: -60px;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(233,30,99,0.08) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .maes-section::after {
+            content: '';
+            position: absolute;
+            bottom: -80px;
+            left: -80px;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(233,30,99,0.06) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .maes-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .maes-tag {
+            display: inline-block;
+            background: linear-gradient(135deg, #e91e63 0%, #c2185b 100%);
+            color: white;
+            padding: 6px 20px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+
+        .maes-header h2 {
+            font-size: 36px;
+            font-weight: bold;
+            color: #1a1a1a;
+            margin-bottom: 12px;
+            line-height: 1.2;
+        }
+
+        .maes-header h2 span {
+            color: #e91e63;
+        }
+
+        .maes-header p {
+            font-size: 17px;
+            color: #555;
+            max-width: 560px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        .maes-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: center;
+        }
+
+        .maes-brindes-title {
+            font-size: 13px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #e91e63;
+            margin-bottom: 20px;
+        }
+
+        .maes-brindes-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-bottom: 32px;
+        }
+
+        .maes-brinde-item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            background: white;
+            padding: 18px 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 12px rgba(233,30,99,0.08);
+            border-left: 4px solid #e91e63;
+            transition: transform 0.25s, box-shadow 0.25s;
+        }
+
+        .maes-brinde-item:hover {
+            transform: translateX(4px);
+            box-shadow: 0 4px 20px rgba(233,30,99,0.14);
+        }
+
+        .maes-brinde-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, #fce4ec 0%, #f8bbd0 100%);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            color: #e91e63;
+            flex-shrink: 0;
+        }
+
+        .maes-brinde-info strong {
+            display: block;
+            font-size: 15px;
+            color: #1a1a1a;
+            margin-bottom: 3px;
+        }
+
+        .maes-brinde-info span {
+            font-size: 13px;
+            color: #777;
+        }
+
+        .maes-cta-box {
+            background: white;
+            border-radius: 16px;
+            padding: 36px;
+            box-shadow: 0 4px 24px rgba(233,30,99,0.1);
+            text-align: center;
+            border: 2px solid #f8bbd0;
+            position: relative;
+            z-index: 1;
+        }
+
+        .maes-cta-icon {
+            font-size: 56px;
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .maes-cta-box h3 {
+            font-size: 22px;
+            font-weight: bold;
+            color: #1a1a1a;
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
+
+        .maes-cta-box p {
+            font-size: 15px;
+            color: #666;
+            margin-bottom: 24px;
+            line-height: 1.6;
+        }
+
+        .maes-price-block {
+            background: linear-gradient(135deg, #fff5f7 0%, #fce4ec 100%);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 24px;
+        }
+
+        .maes-price-label {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #e91e63;
+            font-weight: bold;
+            margin-bottom: 6px;
+        }
+
+        .maes-price-value {
+            font-size: 34px;
+            font-weight: bold;
+            color: #1a1a1a;
+            line-height: 1;
+            margin-bottom: 4px;
+        }
+
+        .maes-price-installment {
+            font-size: 13px;
+            color: #777;
+        }
+
+        .btn-maes {
+            width: 100%;
+            padding: 16px 24px;
+            background: linear-gradient(135deg, #e91e63 0%, #c2185b 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.25s;
+            letter-spacing: 0.5px;
+            box-shadow: 0 4px 16px rgba(233,30,99,0.3);
+        }
+
+        .btn-maes:hover {
+            background: linear-gradient(135deg, #c2185b 0%, #ad1457 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(233,30,99,0.4);
+        }
+
+        .maes-badge-entrega {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 16px;
+            font-size: 13px;
+            color: #777;
+        }
+
+        .maes-badge-entrega i {
+            color: #059669;
+        }
+
+        /* RESPONSIVO */
+        @media (max-width: 768px) {
+            .hero-content,
+            .specs-grid,
+            .downloads-grid,
+            .reviews-grid,
+            .video-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-text h1 {
+                font-size: 32px;
+            }
+
+            .section-title {
+                font-size: 24px;
+            }
+
+            .nav-links {
+                gap: 12px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .rating-summary {
+                grid-template-columns: 1fr;
+            }
+
+            .cart-layout,
+            .checkout-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .maes-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .maes-header h2 {
+                font-size: 26px;
+            }
+
+            .maes-cta-box {
+                padding: 24px 20px;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo" onclick="goToLanding()">
+                <img src="eletroshop_logo.png" alt="EletroShop" style="height: 40px; object-fit: contain;">
+            </div>
+            <div class="nav-links">
+                <a href="#videos" onclick="scrollToSection('videos')">Vídeos</a>
+                <a href="#specs" onclick="scrollToSection('specs')">Especificações</a>
+                <a href="#reviews" onclick="scrollToSection('reviews')">Avaliações</a>
+                <a href="#downloads" onclick="scrollToSection('downloads')">Downloads</a>
+                <div class="cart-icon" onclick="goToCart()">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-badge" id="cart-count">0</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- LANDING PAGE -->
+    <div class="page active" id="landing-page">
+        <!-- HERO SECTION -->
+        <section class="hero" id="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <div class="hero-badge">
+                            <i class="fas fa-star"></i> Melhor Custo-Benefício 2026
+                        </div>
+                        <h1>Lava e Seca LG ThinQ Branca</h1>
+                        <p>Tecnologia inteligente com IA que detecta o tipo de tecido automaticamente. Lave e seque suas roupas em uma única máquina com máxima eficiência energética.</p>
+                        
+                        <div>
+                            <span class="price-original">R$ 5.499,00</span>
+                            <span class="discount-badge">29% OFF</span>
+                        </div>
+                        <div class="price-hero">R$ 3.899,00</div>
+                        <p style="font-size: 14px; opacity: 0.9;">12x de R$ 324,92 sem juros no cartão</p>
+
+                        <div class="hero-buttons">
+                            <button class="btn-primary" onclick="addToCartAndGo()">
+                                <i class="fas fa-shopping-cart"></i> COMPRAR AGORA
+                            </button>
+                            <button class="btn-secondary" onclick="scrollToSection('videos')">
+                                <i class="fas fa-play"></i> VER VÍDEO
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="hero-image">
+                        <!-- 📷 EDITE AQUI: Imagem principal do HERO (seção de topo) -->
+                        <img src="01.jpeg" alt="Lava e Seca LG ThinQ">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GALERIA DE FOTOS COM ZOOM -->
+        <section class="gallery-section" id="gallery">
+            <div class="container">
+                <h2 class="section-title">Galeria de Fotos</h2>
+                <p class="section-subtitle">Visualize o produto em detalhes - passe o mouse para ampliar</p>
+
+                <div class="gallery-container">
+                    <div class="gallery-left">
+                        <div class="gallery-thumbnails-wrapper">
+                            <div class="gallery-thumbnail active" onclick="changeImage('01.jpeg', this)">
+                                <img src="01.jpeg" alt="Foto 1">
+                            </div>
+                            <div class="gallery-thumbnail" onclick="changeImage('02.jpeg', this)">
+                                <img src="02.jpeg" alt="Foto 2">
+                            </div>
+                            <div class="gallery-thumbnail" onclick="changeImage('03.jpeg', this)">
+                                <img src="03.jpeg" alt="Foto 3">
+                            </div>
+                            <div class="gallery-thumbnail" onclick="changeImage('04.jpeg', this)">
+                                <img src="04.jpeg" alt="Foto 4">
+                            </div>
+                            <div class="gallery-thumbnail" onclick="changeImage('05.jpeg', this)">
+                                <img src="05.jpeg" alt="Foto 5">
+                            </div>
+                            <div class="gallery-thumbnail" onclick="changeImage('06.jpeg', this)">
+                                <img src="06.jpeg" alt="Foto 6">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-main" id="galleryMain">
+                        <img class="gallery-main-image" id="mainImage" src="01.jpeg" alt="Lava e Seca LG ThinQ">
+                        <div class="zoom-lens"></div>
+                        <div class="zoom-result">
+                            <img id="zoomImage" src="01.jpeg" alt="Zoom">
+                        </div>
+                    </div>
+
+                    <div class="gallery-info">
+                        <h2>Lava e Seca LG ThinQ Branca</h2>
+                        <p>Máquina lava e seca inteligente com tecnologia AI DD que reconhece e lava todos os tipos de tecidos. Com 6 movimentos exclusivos que lavam melhor que 1, oferecendo máxima eficiência e cuidado com suas roupas.</p>
+
+                        <div class="gallery-specs">
+                            <h4>Especificações Técnicas</h4>
+                            <ul>
+                                <li><strong>Marca:</strong> LG</li>
+                                <li><strong>Modelo:</strong> CV5011WG4.ABWFBRS</li>
+                                <li><strong>Capacidade:</strong> 11 kg</li>
+                                <li><strong>Centrifugação:</strong> 1400 RPM</li>
+                                <li><strong>Cor:</strong> Branca</li>
+                                <li><strong>Voltagem:</strong> 110V</li>
+                                <li><strong>Dimensões:</strong> 56 x 60 x 85 cm</li>
+                                <li><strong>Peso:</strong> 73 kg</li>
+                                <li><strong>Painel:</strong> Touch</li>
+                                <li><strong>Abertura:</strong> Frontal (Front Load)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- VÍDEOS -->
+        <section class="video-section" id="videos">
+            <div class="container">
+                <h2 class="section-title">Conheça o Produto</h2>
+                <p class="section-subtitle">Veja como a Lava e Seca LG ThinQ pode transformar sua rotina</p>
+
+                <div class="video-grid">
+                    <div class="video-card" data-video="anuncio">
+                        <video class="video-player" style="width: 100%; height: 100%; object-fit: cover;" controls preload="metadata">
+                            <source src="anuncio.mp4" type="video/mp4">
+                            Seu navegador não suporta vídeo HTML5.
+                        </video>
+                        <div class="video-title">Anúncio Oficial</div>
+                        <div class="video-description">Conheça os destaques e inovações da LG ThinQ</div>
+                    </div>
+
+                    <div class="video-card" data-video="tutorial">
+                        <video class="video-player" style="width: 100%; height: 100%; object-fit: cover;" controls preload="metadata">
+                            <source src="uso.mp4" type="video/mp4">
+                            Seu navegador não suporta vídeo HTML5.
+                        </video>
+                        <div class="video-title">Como Usar</div>
+                        <div class="video-description">Aprenda a usar todos os recursos da máquina</div>
+                    </div>
+
+                    <div class="video-card" data-video="unboxing">
+                        <video class="video-player" style="width: 100%; height: 100%; object-fit: cover;" controls preload="metadata">
+                            <source src="unboxing.mp4" type="video/mp4">
+                            Seu navegador não suporta vídeo HTML5.
+                        </video>
+                        <div class="video-title">Unboxing e Instalação</div>
+                        <div class="video-description">Veja o produto chegando e como instalar</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ESPECIFICAÇÕES TÉCNICAS -->
+        <section class="specs-section" id="specs">
+            <div class="container">
+                <h2 class="section-title">Especificações Técnicas</h2>
+                <p class="section-subtitle">Conheça todos os detalhes do produto</p>
+
+                <div class="specs-grid">
+                    <div class="specs-image">
+                        <!-- 📷 EDITE AQUI: Imagem da seção de ESPECIFICAÇÕES -->
+                        <img src="06.jpeg">
+                    </div>
+
+                    <div class="specs-content">
+                        <h3>Características Principais</h3>
+                        <ul class="specs-list">
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <div>
+                                    <strong>Capacidade</strong>
+                                    <span>11 Quilogramas</span>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <div>
+                                    <strong>Velocidade de Centrifugação</strong>
+                                    <span>1400 RPM - Máxima eficiência de secagem</span>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <div>
+                                    <strong>Tecnologia AI DD</strong>
+                                    <span>Sensor inteligente que reconhece e lava todos os tipos de tecidos</span>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <div>
+                                    <strong>Lavagem a Vapor</strong>
+                                    <span>Tecnologia Steam para melhor cuidado das roupas</span>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <div>
+                                    <strong>Conectividade LG ThinQ</strong>
+                                    <span>Monitore e opere via Wi-Fi com o aplicativo LG ThinQ</span>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle"></i>
+                                <div>
+                                    <strong>6 Motions</strong>
+                                    <span>6 movimentos lavam melhor que 1 - Tecnologia exclusiva</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AVALIAÇÕES -->
+        <section class="reviews-section" id="reviews">
+            <div class="container">
+                <h2 class="section-title">Avaliações de Clientes</h2>
+                <p class="section-subtitle">Veja o que nossos clientes acham do produto</p>
+
+                <div class="rating-summary">
+                    <div class="rating-box">
+                        <div class="big-rating">4.8</div>
+                        <div class="stars-display">★★★★★</div>
+                        <div class="rating-text">Baseado em 1.542 avaliações</div>
+                    </div>
+
+                    <div class="rating-bars">
+                        <div class="rating-bar">
+                            <div class="rating-bar-label">5 ★</div>
+                            <div class="rating-bar-fill">
+                                <div class="rating-bar-progress" style="width: 75%;"></div>
+                            </div>
+                            <div class="rating-bar-count">1.156</div>
+                        </div>
+                        <div class="rating-bar">
+                            <div class="rating-bar-label">4 ★</div>
+                            <div class="rating-bar-fill">
+                                <div class="rating-bar-progress" style="width: 15%;"></div>
+                            </div>
+                            <div class="rating-bar-count">231</div>
+                        </div>
+                        <div class="rating-bar">
+                            <div class="rating-bar-label">3 ★</div>
+                            <div class="rating-bar-fill">
+                                <div class="rating-bar-progress" style="width: 7%;"></div>
+                            </div>
+                            <div class="rating-bar-count">108</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reviews-grid">
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="review-avatar">MF</div>
+                            <div>
+                                <div class="review-name">Maria Fernandes</div>
+                                <div class="review-date">Compra verificada - 2 meses atrás</div>
+                            </div>
+                        </div>
+                        <div class="review-stars">★★★★★</div>
+                        <div class="review-title">Excelente máquina! Superou expectativas</div>
+                        <div class="review-text">A máquina é fantástica! O app ThinQ funciona perfeitamente e consegui controlar tudo do meu celular.</div>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="review-avatar">JC</div>
+                            <div>
+                                <div class="review-name">João Carlos</div>
+                                <div class="review-date">Compra verificada - 1 mês atrás</div>
+                            </div>
+                        </div>
+                        <div class="review-stars">★★★★★</div>
+                        <div class="review-title">Melhor investimento que fiz em casa</div>
+                        <div class="review-text">Não tenho palavras para descrever. A tecnologia AI detecta tudo automaticamente. Minha conta de luz caiu significativamente.</div>
+                    </div>
+
+                    <div class="review-card">
+                        <div class="review-header">
+                            <div class="review-avatar">AS</div>
+                            <div>
+                                <div class="review-name">Ana Silva</div>
+                                <div class="review-date">Compra verificada - 3 semanas atrás</div>
+                            </div>
+                        </div>
+                        <div class="review-stars">★★★★☆</div>
+                        <div class="review-title">Muito bom, apenas um detalhe</div>
+                        <div class="review-text">A máquina é excelente, mas o ciclo de secagem poderia ser um pouco mais rápido. Mesmo assim, estou muito satisfeita.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DIA DAS MAES - BRINDE ESPECIAL -->
+        <section class="maes-section" id="dia-das-maes">
+            <div class="container">
+
+                <div class="maes-header">
+                    <div class="maes-tag">&#10084; Dia das M&atilde;es</div>
+                    <h2>O Presente que <span>Facilita a Vida</span> de Verdade</h2>
+                    <p>Dia das M&atilde;es &eacute; a ocasi&atilde;o perfeita para presentear com algo que transforma a rotina. A Lava e Seca LG ThinQ &eacute; o presente que toda m&atilde;e merece &mdash; pr&aacute;tico, inteligente e cheio de cuidado.</p>
+                </div>
+
+                <div class="maes-layout">
+
+                    <!-- BRINDES -->
+                    <div>
+                        <p class="maes-brindes-title">&#127873; Compre agora e ganhe o kit brinde exclusivo</p>
+                        <ul class="maes-brindes-list">
+                            <li class="maes-brinde-item">
+                                <div class="maes-brinde-icon">
+                                    <i class="fas fa-soap"></i>
+                                </div>
+                                <div class="maes-brinde-info">
+                                    <strong>Kit Lavanderia Premium</strong>
+                                    <span>Sabão, amaciante e tira-manchas selecionados especialmente para a LG ThinQ</span>
+                                </div>
+                            </li>
+                            <li class="maes-brinde-item">
+                                <div class="maes-brinde-icon">
+                                    <i class="fas fa-box-open"></i>
+                                </div>
+                                <div class="maes-brinde-info">
+                                    <strong>Cesto Organizador</strong>
+                                    <span>Cesto de roupa premium para manter a lavanderia sempre organizada e com estilo</span>
+                                </div>
+                            </li>
+                            <li class="maes-brinde-item">
+                                <div class="maes-brinde-icon">
+                                    <i class="fas fa-ticket-alt"></i>
+                                </div>
+                                <div class="maes-brinde-info">
+                                    <strong>Voucher de Limpeza Dom&eacute;stica</strong>
+                                    <span>1 sess&atilde;o de limpeza profissional para estrear a m&aacute;quina com tudo organizado</span>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <p style="font-size: 13px; color: #999; border-top: 1px solid #f8bbd0; padding-top: 16px;">
+                            <i class="fas fa-info-circle" style="color: #e91e63;"></i>
+                            &nbsp;Brindes v&aacute;lidos para compras realizadas at&eacute; o Dia das M&atilde;es. Sujeito a disponibilidade de estoque.
+                        </p>
+                    </div>
+
+                    <!-- CTA BOX -->
+                    <div class="maes-cta-box">
+                        <span class="maes-cta-icon">&#128144;</span>
+                        <h3>Surpreenda a sua m&atilde;e com tecnologia e praticidade</h3>
+                        <p>Al&eacute;m do desconto exclusivo de 29%, sua compra vem acompanhada do kit brinde especial de Dia das M&atilde;es, sem custo adicional.</p>
+
+                        <div class="maes-price-block">
+                            <div class="maes-price-label">Promo&ccedil;&atilde;o Dia das M&atilde;es</div>
+                            <div class="maes-price-value">R$ 3.899,00</div>
+                            <div class="maes-price-installment">12x de R$ 324,92 sem juros &bull; ou &agrave; vista com desconto</div>
+                        </div>
+
+                        <button class="btn-maes" onclick="addToCartAndGo()">
+                            <i class="fas fa-gift"></i>&nbsp; GARANTIR MEU PRESENTE + BRINDES
+                        </button>
+
+                        <div class="maes-badge-entrega">
+                            <i class="fas fa-truck"></i>
+                            <span>Entrega r&aacute;pida &bull; Frete para todo o Brasil</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- DOWNLOADS E MANUAL -->
+        <section class="downloads-section" id="downloads">
+            <div class="container">
+                <h2 class="section-title">Manual do Usuário</h2>
+                <p class="section-subtitle">Acesse o manual oficial da LG com instruções completas de uso e manutenção</p>
+
+                <div style="text-align: center; padding: 40px 0;">
+                    <a href="https://gscs-manual.lge.com/DFZ/MFL70701220/pt-br/main.html" target="_blank" class="download-btn" style="font-size: 18px; padding: 16px 40px;">
+                        <i class="fas fa-book"></i> Acessar Manual LG
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA FINAL -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Pronto para Transformar Sua Rotina?</h2>
+                    <p>Não perca a oportunidade de ter a melhor Lava e Seca do mercado com 29% de desconto</p>
+                    <div class="cta-buttons">
+                        <button class="btn-cta-primary" onclick="addToCartAndGo()">
+                            <i class="fas fa-shopping-cart"></i> COMPRAR AGORA - R$ 3.899,00
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="container">
+                <div style="margin-bottom: 16px;">
+                    <p>&copy; 2026 UnipEletro. Todos os direitos reservados.</p>
+                    <p>Lava e Seca LG ThinQ Branca - Seu parceiro de confiança em casa</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- PÁGINA DO CARRINHO -->
+    <div class="page" id="cart-page">
+        <div class="container cart-page">
+            <div class="cart-header">
+                <button class="back-btn" onclick="goToLanding()">
+                    <i class="fas fa-arrow-left"></i>
+                </button>
+                <h2>Seu Carrinho</h2>
+            </div>
+
+            <div class="cart-layout">
+                <div class="cart-items" id="cart-items">
+                    <div class="empty-cart">
+                        <div class="empty-cart-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <p>Seu carrinho está vazio</p>
+                    </div>
+                </div>
+
+                <div class="cart-summary">
+                    <div class="summary-title">RESUMO DA COMPRA</div>
+                    <div class="summary-row">
+                        <span>Subtotal</span>
+                        <span id="summary-subtotal">R$ 0,00</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Frete</span>
+                        <span id="summary-shipping">R$ 89,90</span>
+                    </div>
+                    <div class="summary-row total">
+                        <span>Total</span>
+                        <span class="value" id="summary-total">R$ 0,00</span>
+                    </div>
+                    <button class="checkout-btn" onclick="goToCheckout()">IR PARA O CHECKOUT</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PÁGINA DE CHECKOUT -->
+    <div class="page" id="checkout-page">
+        <div class="container checkout-page">
+            <div class="cart-header">
+                <button class="back-btn" onclick="goToCart()">
+                    <i class="fas fa-arrow-left"></i>
+                </button>
+                <h2>Checkout</h2>
+            </div>
+
+            <div class="checkout-layout">
+                <div>
+                    <!-- Dados Pessoais -->
+                    <div class="checkout-section">
+                        <div class="section-title-checkout">Dados Pessoais</div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Nome *</label>
+                                <input type="text" id="first-name" placeholder="Seu nome" value="João">
+                            </div>
+                            <div class="form-group">
+                                <label>Sobrenome *</label>
+                                <input type="text" id="last-name" placeholder="Seu sobrenome" value="Silva">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>CPF *</label>
+                            <input type="text" id="cpf" placeholder="000.000.000-00" maxlength="14" value="123.456.789-00">
+                        </div>
+                        <div class="form-group">
+                            <label>E-mail *</label>
+                            <input type="email" id="email" placeholder="seu@email.com" value="joao@email.com">
+                        </div>
+                        <div class="form-group">
+                            <label>Telefone *</label>
+                            <input type="text" id="phone" placeholder="(11) 99999-9999" maxlength="15" value="(11) 98765-4321">
+                        </div>
+                    </div>
+
+                    <!-- Endereço -->
+                    <div class="checkout-section">
+                        <div class="section-title-checkout">Endereço de Entrega</div>
+                        <div class="form-group">
+                            <label>CEP *</label>
+                            <input type="text" id="address-cep" placeholder="00000-000" maxlength="9" value="01310-100">
+                        </div>
+                        <div class="form-group">
+                            <label>Rua *</label>
+                            <input type="text" id="address-street" placeholder="Rua" value="Avenida Paulista">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Número *</label>
+                                <input type="text" id="address-number" placeholder="Número" value="1000">
+                            </div>
+                            <div class="form-group">
+                                <label>Complemento</label>
+                                <input type="text" id="address-complement" placeholder="Apto, sala, etc" value="Apto 1500">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Cidade *</label>
+                                <input type="text" id="address-city" placeholder="Cidade" value="São Paulo">
+                            </div>
+                            <div class="form-group">
+                                <label>Estado *</label>
+                                <select id="address-state">
+                                    <option value="">Selecione</option>
+                                    <option value="SP" selected>SP</option>
+                                    <option value="RJ">RJ</option>
+                                    <option value="MG">MG</option>
+                                    <option value="BA">BA</option>
+                                    <option value="RS">RS</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pagamento -->
+                    <div class="checkout-section">
+                        <div class="section-title-checkout">Forma de Pagamento</div>
+                        <div class="payment-methods">
+                            <label class="payment-method">
+                                <input type="radio" name="payment" value="credit" checked onchange="togglePaymentDetails('credit')">
+                                <div class="payment-method-label">
+                                    <div class="payment-method-title">
+                                        <i class="fas fa-credit-card"></i> Cartão de Crédito
+                                    </div>
+                                    <div class="payment-method-desc">Parcelado em até 12x</div>
+                                </div>
+                            </label>
+                            <label class="payment-method">
+                                <input type="radio" name="payment" value="pix" onchange="togglePaymentDetails('pix')">
+                                <div class="payment-method-label">
+                                    <div class="payment-method-title">
+                                        <i class="fas fa-bolt"></i> PIX
+                                    </div>
+                                    <div class="payment-method-desc">Transferência instantânea</div>
+                                </div>
+                            </label>
+                            <label class="payment-method">
+                                <input type="radio" name="payment" value="boleto" onchange="togglePaymentDetails('boleto')">
+                                <div class="payment-method-label">
+                                    <div class="payment-method-title">
+                                        <i class="fas fa-barcode"></i> Boleto Bancário
+                                    </div>
+                                    <div class="payment-method-desc">Vencimento em 3 dias úteis</div>
+                                </div>
+                            </label>
+                        </div>
+
+                        <!-- Detalhes do Cartão -->
+                        <div class="payment-details show" id="credit-details">
+                            <div class="form-group">
+                                <label>Número do Cartão *</label>
+                                <input type="text" placeholder="0000 0000 0000 0000" maxlength="19" value="4111 1111 1111 1111">
+                            </div>
+                            <div class="form-group">
+                                <label>Nome do Titular *</label>
+                                <input type="text" placeholder="Como aparece no cartão" value="JOAO SILVA">
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label>Validade *</label>
+                                    <input type="text" placeholder="MM/AA" maxlength="5" value="12/28">
+                                </div>
+                                <div class="form-group">
+                                    <label>CVV *</label>
+                                    <input type="text" placeholder="000" maxlength="4" value="123">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Parcelamento *</label>
+                                <select id="installments">
+                                    <option value="1">1x de R$ 3.988,90 (sem juros)</option>
+                                    <option value="2">2x de R$ 1.994,45 (sem juros)</option>
+                                    <option value="3">3x de R$ 1.329,63 (sem juros)</option>
+                                    <option value="6">6x de R$ 664,82 (sem juros)</option>
+                                    <option value="12" selected>12x de R$ 332,41 (sem juros)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Detalhes PIX -->
+                        <div class="payment-details" id="pix-details">
+                            <p style="font-size: 14px; color: #666;">Após confirmar a compra, você receberá um código PIX para escanear e fazer o pagamento instantaneamente.</p>
+                        </div>
+
+                        <!-- Detalhes Boleto -->
+                        <div class="payment-details" id="boleto-details">
+                            <p style="font-size: 14px; color: #666;">Após confirmar a compra, você receberá um boleto bancário para pagar em qualquer banco.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Resumo do Checkout -->
+                <div class="checkout-summary">
+                    <div class="summary-title">RESUMO DA COMPRA</div>
+                    <div id="checkout-items"></div>
+                    <div class="summary-item">
+                        <span>Subtotal</span>
+                        <span id="checkout-subtotal">R$ 0,00</span>
+                    </div>
+                    <div class="summary-item">
+                        <span>Frete</span>
+                        <span id="checkout-shipping">R$ 89,90</span>
+                    </div>
+                    <div class="summary-item total">
+                        <span>Total</span>
+                        <span class="value" id="checkout-total">R$ 0,00</span>
+                    </div>
+                    <button class="finish-btn" onclick="finishPurchase()">FINALIZAR COMPRA</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PÁGINA DE SUCESSO -->
+    <div class="page" id="success-page">
+        <div class="container success-page">
+            <div class="success-container">
+                <div class="success-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <h1 class="success-title">Compra Realizada com Sucesso!</h1>
+                <p class="success-message">Obrigado pela sua compra. Você receberá um e-mail de confirmação em breve.</p>
+
+                <div class="order-number">
+                    <div class="order-number-label">Número do Pedido</div>
+                    <div class="order-number-value" id="order-number">#ES-000000</div>
+                </div>
+
+                <div class="success-details">
+                    <div class="success-details-row">
+                        <strong>Cliente:</strong>
+                        <span id="success-name">-</span>
+                    </div>
+                    <div class="success-details-row">
+                        <strong>E-mail:</strong>
+                        <span id="success-email">-</span>
+                    </div>
+                    <div class="success-details-row">
+                        <strong>Valor Total:</strong>
+                        <span id="success-total">R$ 0,00</span>
+                    </div>
+                    <div class="success-details-row">
+                        <strong>Entrega Estimada:</strong>
+                        <span id="success-delivery">7 a 10 dias úteis</span>
+                    </div>
+                </div>
+
+                <div class="success-buttons">
+                    <button class="btn-continue" onclick="resetStore()">VOLTAR PARA A LOJA</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL DE VÍDEO -->
+    <div class="modal" id="videoModal">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeModal()">&times;</button>
+            <!-- iframe para vídeos do YouTube -->
+            <iframe class="modal-video" id="videoFrame" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="display: none;"></iframe>
+            <!-- étag video para vídeos locais -->
+<video class="modal-video" id="videoLocal" style="display: none;" controls preload="metadata">
+                <source id="videoSource" src="" type="video/mp4">
+                <source id="videoSourceWebm" src="" type="video/webm">
+                Seu navegador não suporta a tag de vídeo.
+            </video>
+        </div>
+    </div>
+
+    <script>
+        // ╔════════════════════════════════════════════════════════════════════════════════╗
+        // ║                    CONFIGURAÇÕES DO PRODUTO - EDITE AQUI!                     ║
+        // ║                                                                                ║
+        // ║  ⚠️  IMPORTANTE: Todas as imagens e informações do produto estão aqui.        ║
+        // ║  Você pode editar o nome, preço, descrição e principalmente as IMAGENS!       ║
+        // ╚════════════════════════════════════════════════════════════════════════════════╝
+        
+        const product = {
+            id: 1,
+            name: "Lava e Seca LG ThinQ Branca 10,5kg - Inteligente com IA",
+            price: 3899.00,
+            originalPrice: 5499.00,
+            // 📷 EDITE AQUI: Coloque a URL da sua imagem principal do produto
+            image: "https://images.unsplash.com/photo-1517668808822-9ebb02ae2a0e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+        };
+
+        let cart = [];
+        let shippingCost = 89.90;
+
+        // ╔════════════════════════════════════════════════════════════════════════════════╗
+        // ║                    ADICIONE SEUS VÍDEOS AQUI - EDITE ABAIXO!                  ║
+        // ║                                                                                ║
+        // ║  🎬 VOCÊ TEM 2 OPÇÕES:                                                        ║
+        // ║                                                                                ║
+        // ║  OPÇÃO 1️⃣  - VÍDEOS DO YOUTUBE (Online):                                      ║
+        // ║  • Faça upload do seu vídeo no YouTube                                        ║
+        // ║  • Clique em "Compartilhar" > "Incorporar"                                   ║
+        // ║  • Copie o link que aparece em src="..."                                     ║
+        // ║  • Cole o link completo abaixo (exemplo: https://www.youtube.com/embed/ABC)   ║
+        // ║                                                                                ║
+        // ║  OPÇÃO 2️⃣  - VÍDEOS LOCAIS (Offline - No seu PC):                             ║
+        // ║  • Coloque seus vídeos (formato .mp4) na MESMA PASTA do arquivo HTML          ║
+        // ║  • Use apenas o nome do arquivo (exemplo: "anuncio.mp4")                     ║
+        // ║  • O sistema detectará automaticamente se é local ou YouTube                  ║
+        // ║                                                                                ║
+        // ║  ESTRUTURA DE PASTAS RECOMENDADA:                                             ║
+        // ║  projeto_unip/                                                                ║
+        // ║    ├─ landing_page_integrada.html                                             ║
+        // ║    ├─ anuncio.mp4                                                             ║
+        // ║    ├─ tutorial.mp4                                                            ║
+        // ║    ├─ unboxing.mp4                                                            ║
+        // ║    ├─ depoimento1.mp4                                                         ║
+        // ║    ├─ depoimento2.mp4                                                         ║
+        // ║    └─ depoimento3.mp4                                                         ║
+        // ╚════════════════════════════════════════════════════════════════════════════════╝
+        
+        const videos = {
+            // 🎬 EDITE AQUI: Vídeo de Anúncio/Apresentação do Produto
+            anuncio: 'anuncio.mp4',
+            
+            // 🎬 EDITE AQUI: Vídeo de Tutorial/Como Usar
+            tutorial: 'uso.mp4',
+            
+            // 🎬 EDITE AQUI: Vídeo de Unboxing/Instalação
+            unboxing: 'unboxing.mp4',
+            
+            // 🎬 EDITE AQUI: Vídeos de Depoimentos (Pessoas que usaram)
+            depoimento1: 'depoimento1.mp4',
+            depoimento2: 'depoimento2.mp4',
+            depoimento3: 'depoimento3.mp4'
+        };
+        // ========================================
+
+        // NAVEGAÇÃO
+        function showPage(pageId) {
+            document.querySelectorAll('.page').forEach(page => {
+                page.classList.remove('active');
+            });
+            document.getElementById(pageId).classList.add('active');
+            window.scrollTo(0, 0);
+        }
+
+        function goToLanding() {
+            showPage('landing-page');
+        }
+
+        function goToCart() {
+            showPage('cart-page');
+            renderCart();
+        }
+
+        function goToCheckout() {
+            if (cart.length === 0) {
+                alert('Adicione produtos ao carrinho primeiro!');
+                return;
+            }
+            showPage('checkout-page');
+            renderCheckout();
+        }
+
+        function addToCartAndGo() {
+            const existing = cart.find(item => item.id === product.id);
+            if (existing) {
+                existing.quantity++;
+            } else {
+                cart.push({ ...product, quantity: 1 });
+            }
+            updateCartCount();
+            goToCart();
+        }
+
+        function updateCartCount() {
+            const count = cart.reduce((acc, item) => acc + item.quantity, 0);
+            document.getElementById('cart-count').textContent = count;
+        }
+
+        function renderCart() {
+            const container = document.getElementById('cart-items');
+            
+            if (cart.length === 0) {
+                container.innerHTML = `
+                    <div class="empty-cart">
+                        <div class="empty-cart-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <p>Seu carrinho está vazio</p>
+                    </div>
+                `;
+                updateCartSummary();
+                return;
+            }
+
+            container.innerHTML = cart.map(item => `
+                <div class="cart-item">
+                    <div class="cart-item-image">
+                        <!-- 📷 Imagem do produto no carrinho (vem do objeto product acima) -->
+                        <img src="${item.image}" alt="${item.name}">
+                    </div>
+                    <div class="cart-item-details">
+                        <h3>${item.name}</h3>
+                        <div class="cart-item-price">R$ ${item.price.toLocaleString('pt-BR', {minimumFractionDigits: 2})}</div>
+                        <div class="quantity-control">
+                            <button onclick="updateQuantity(${item.id}, -1)">−</button>
+                            <span>${item.quantity}</span>
+                            <button onclick="updateQuantity(${item.id}, 1)">+</button>
+                        </div>
+                        <a class="remove-btn" onclick="removeItem(${item.id})">
+                            <i class="fas fa-trash-can"></i> Remover
+                        </a>
+                    </div>
+                    <div class="cart-item-actions">
+                        <div class="cart-item-total">R$ ${(item.price * item.quantity).toLocaleString('pt-BR', {minimumFractionDigits: 2})}</div>
+                    </div>
+                </div>
+            `).join('');
+
+            updateCartSummary();
+        }
+
+        function updateQuantity(id, delta) {
+            const item = cart.find(i => i.id === id);
+            if (item) {
+                item.quantity += delta;
+                if (item.quantity <= 0) {
+                    removeItem(id);
+                } else {
+                    renderCart();
+                    updateCartCount();
+                }
+            }
+        }
+
+        function removeItem(id) {
+            cart = cart.filter(item => item.id !== id);
+            renderCart();
+            updateCartCount();
+        }
+
+        function updateCartSummary() {
+            const subtotal = cart.reduce((acc, item) => acc + (item.price * item.quantity), 0);
+            const shipping = cart.length > 0 ? shippingCost : 0;
+            const total = subtotal + shipping;
+
+            document.getElementById('summary-subtotal').textContent = `R$ ${subtotal.toLocaleString('pt-BR', {minimumFractionDigits: 2})}`;
+            document.getElementById('summary-shipping').textContent = `R$ ${shipping.toLocaleString('pt-BR', {minimumFractionDigits: 2})}`;
+            document.getElementById('summary-total').textContent = `R$ ${total.toLocaleString('pt-BR', {minimumFractionDigits: 2})}`;
+        }
+
+        function renderCheckout() {
+            const subtotal = cart.reduce((acc, item) => acc + (item.price * item.quantity), 0);
+            const shipping = shippingCost;
+            const total = subtotal + shipping;
+
+            document.getElementById('checkout-subtotal').textContent = `R$ ${subtotal.toLocaleString('pt-BR', {minimumFractionDigits: 2})}`;
+            document.getElementById('checkout-shipping').textContent = `R$ ${shipping.toLocaleString('pt-BR', {minimumFractionDigits: 2})}`;
+            document.getElementById('checkout-total').textContent = `R$ ${total.toLocaleString('pt-BR', {minimumFractionDigits: 2})}`;
+
+            const itemsHtml = cart.map(item => `
+                <div class="summary-item" style="border-bottom: 1px solid #f5f5f5; padding-bottom: 12px; margin-bottom: 12px;">
+                    <span>${item.quantity}x ${item.name.substring(0, 30)}...</span>
+                    <span>R$ ${(item.price * item.quantity).toLocaleString('pt-BR', {minimumFractionDigits: 2})}</span>
+                </div>
+            `).join('');
+            document.getElementById('checkout-items').innerHTML = itemsHtml;
+        }
+
+        function togglePaymentDetails(method) {
+            document.querySelectorAll('.payment-details').forEach(el => {
+                el.classList.remove('show');
+            });
+            document.getElementById(method + '-details').classList.add('show');
+        }
+
+        function finishPurchase() {
+            const firstName = document.getElementById('first-name').value;
+            const lastName = document.getElementById('last-name').value;
+            const cpf = document.getElementById('cpf').value;
+            const email = document.getElementById('email').value;
+
+            if (!firstName || !lastName || !cpf || !email) {
+                alert('Por favor, preencha todos os campos obrigatórios');
+                return;
+            }
+
+            const btn = event.target;
+            btn.disabled = true;
+            btn.textContent = 'PROCESSANDO...';
+
+            setTimeout(() => {
+                const subtotal = cart.reduce((acc, item) => acc + (item.price * item.quantity), 0);
+                const total = subtotal + shippingCost;
+                const orderNumber = '#ES-' + Math.random().toString(36).substring(2, 8).toUpperCase();
+
+                document.getElementById('order-number').textContent = orderNumber;
+                document.getElementById('success-name').textContent = firstName + ' ' + lastName;
+                document.getElementById('success-email').textContent = email;
+                document.getElementById('success-total').textContent = `R$ ${total.toLocaleString('pt-BR', {minimumFractionDigits: 2})}`;
+
+                showPage('success-page');
+                btn.disabled = false;
+                btn.textContent = 'FINALIZAR COMPRA';
+            }, 1500);
+        }
+
+        function resetStore() {
+            cart = [];
+            updateCartCount();
+            document.querySelectorAll('input').forEach(input => input.value = '');
+            document.querySelectorAll('select').forEach(select => select.value = '');
+            goToLanding();
+        }
+
+        // GALERIA DE FOTOS - Mudar imagem ao clicar na miniatura
+        function changeImage(imageSrc, element) {
+            document.getElementById('mainImage').src = imageSrc;
+            document.getElementById('zoomImage').src = imageSrc;
+            
+            // Remove a classe active de todas as miniaturas
+            document.querySelectorAll('.gallery-thumbnail').forEach(thumb => {
+                thumb.classList.remove('active');
+            });
+            
+            // Adiciona a classe active à miniatura clicada
+            element.classList.add('active');
+        }
+
+        // GALERIA - Efeito de zoom ao passar o mouse
+        document.addEventListener('DOMContentLoaded', function() {
+            const galleryMain = document.getElementById('galleryMain');
+            const mainImage = document.getElementById('mainImage');
+            const zoomLens = document.querySelector('.zoom-lens');
+            const zoomResult = document.querySelector('.zoom-result');
+            const zoomImage = document.getElementById('zoomImage');
+
+            if (galleryMain) {
+                galleryMain.addEventListener('mousemove', function(e) {
+                    const rect = galleryMain.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+
+                    // Posiciona a lupa
+                    const lensX = x - zoomLens.offsetWidth / 2;
+                    const lensY = y - zoomLens.offsetHeight / 2;
+
+                    zoomLens.style.left = Math.max(0, Math.min(lensX, rect.width - zoomLens.offsetWidth)) + 'px';
+                    zoomLens.style.top = Math.max(0, Math.min(lensY, rect.height - zoomLens.offsetHeight)) + 'px';
+
+                    // Calcula o zoom
+                    const zoomLevel = 2;
+                    const offsetX = (x / rect.width) * 100;
+                    const offsetY = (y / rect.height) * 100;
+
+                    zoomImage.style.transform = `scale(${zoomLevel})`;
+                    zoomImage.style.transformOrigin = `${offsetX}% ${offsetY}%`;
+                });
+
+                galleryMain.addEventListener('mouseleave', function() {
+                    zoomLens.style.display = 'none';
+                    zoomResult.style.display = 'none';
+                });
+            }
+        });
+
+        // VÍDEOS - Reprodução inline na página
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.video-player').forEach(video => {
+                video.addEventListener('play', function() {
+                    // Pausa todos os outros vídeos quando um começa a tocar
+                    document.querySelectorAll('.video-player').forEach(v => {
+                        if (v !== this) {
+                            v.pause();
+                        }
+                    });
+                });
+            });
+        });
+
+        function downloadFile(filename) {
+            alert(`Download iniciado: ${filename}\n\nNota: Este é um exemplo. Em produção, isso baixaria o arquivo real.`);
+        }
+
+        function scrollToSection(sectionId) {
+            const element = document.getElementById(sectionId);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        // Fechar modal ao clicar fora
+        window.onclick = function(event) {
+            const modal = document.getElementById('videoModal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        }
+
+        // Fechar modal com ESC
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeModal();
+            }
+        });
+    </script>
+
+</body>
+</html>
