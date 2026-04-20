@@ -356,9 +356,21 @@
 
         .gallery-container {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: auto 1fr;
             gap: 40px;
             align-items: start;
+            margin-bottom: 40px;
+        }
+
+        .gallery-left {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            width: 300px;
+        }
+
+        .gallery-thumbnails-wrapper {
+            display: contents;
         }
 
         .gallery-main {
@@ -367,6 +379,8 @@
             border-radius: 8px;
             background: #f5f5f5;
             aspect-ratio: 1;
+            width: 100%;
+            max-width: 400px;
         }
 
         .gallery-main-image {
@@ -392,6 +406,7 @@
             display: none;
             border-radius: 4px;
             pointer-events: none;
+            z-index: 10;
         }
 
         .gallery-main:hover .zoom-lens {
@@ -399,17 +414,16 @@
         }
 
         .zoom-result {
-            position: absolute;
-            top: 0;
-            right: -220px;
-            width: 200px;
-            height: 200px;
+            position: fixed;
+            width: 300px;
+            height: 300px;
             border: 1px solid #ddd;
             overflow: hidden;
             background: white;
             border-radius: 4px;
             display: none;
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            z-index: 100;
         }
 
         .zoom-result img {
@@ -423,9 +437,7 @@
         }
 
         .gallery-thumbnails {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 12px;
+            display: contents;
         }
 
         .gallery-thumbnail {
@@ -457,6 +469,7 @@
             display: flex;
             flex-direction: column;
             gap: 24px;
+            grid-column: 1 / -1;
         }
 
         .gallery-info h2 {
@@ -1687,15 +1700,8 @@
                 <p class="section-subtitle">Visualize o produto em detalhes - passe o mouse para ampliar</p>
 
                 <div class="gallery-container">
-                    <div>
-                        <div class="gallery-main" id="galleryMain">
-                            <img class="gallery-main-image" id="mainImage" src="01.jpeg" alt="Lava e Seca LG ThinQ">
-                            <div class="zoom-lens"></div>
-                            <div class="zoom-result">
-                                <img id="zoomImage" src="01.jpeg" alt="Zoom">
-                            </div>
-                        </div>
-                        <div class="gallery-thumbnails" style="margin-top: 20px;">
+                    <div class="gallery-left">
+                        <div class="gallery-thumbnails-wrapper">
                             <div class="gallery-thumbnail active" onclick="changeImage('01.jpeg', this)">
                                 <img src="01.jpeg" alt="Foto 1">
                             </div>
@@ -1714,6 +1720,14 @@
                             <div class="gallery-thumbnail" onclick="changeImage('06.jpeg', this)">
                                 <img src="06.jpeg" alt="Foto 6">
                             </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-main" id="galleryMain">
+                        <img class="gallery-main-image" id="mainImage" src="01.jpeg" alt="Lava e Seca LG ThinQ">
+                        <div class="zoom-lens"></div>
+                        <div class="zoom-result">
+                            <img id="zoomImage" src="01.jpeg" alt="Zoom">
                         </div>
                     </div>
 
@@ -2578,7 +2592,12 @@
             const zoomResult = document.querySelector('.zoom-result');
             const zoomImage = document.getElementById('zoomImage');
 
-            if (galleryMain) {
+            if (galleryMain && zoomLens && zoomResult && zoomImage) {
+                galleryMain.addEventListener('mouseenter', function() {
+                    zoomLens.style.display = 'block';
+                    zoomResult.style.display = 'block';
+                });
+
                 galleryMain.addEventListener('mousemove', function(e) {
                     const rect = galleryMain.getBoundingClientRect();
                     const x = e.clientX - rect.left;
@@ -2590,6 +2609,10 @@
 
                     zoomLens.style.left = Math.max(0, Math.min(lensX, rect.width - zoomLens.offsetWidth)) + 'px';
                     zoomLens.style.top = Math.max(0, Math.min(lensY, rect.height - zoomLens.offsetHeight)) + 'px';
+
+                    // Posiciona o zoom-result ao lado do cursor
+                    zoomResult.style.left = (rect.right + 20) + 'px';
+                    zoomResult.style.top = (rect.top + window.scrollY) + 'px';
 
                     // Calcula o zoom
                     const zoomLevel = 2;
