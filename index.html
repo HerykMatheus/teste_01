@@ -19,9 +19,8 @@
             line-height: 1.6;
         }
 
-        /* NAVBAR */
         .navbar {
-            background-color: #001f3f; /* Azul escuro como no logo */
+            background-color: #001f3f;
             padding: 12px 0;
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
             position: sticky;
@@ -50,7 +49,7 @@
         }
 
         .logo-icon {
-            color: #ff8c00; /* Laranja como no logo */
+            color: #ff8c00;
             font-size: 28px;
         }
 
@@ -66,26 +65,11 @@
             font-size: 14px;
             cursor: pointer;
             transition: color 0.2s;
+            display: none;
         }
 
         .nav-links a:hover {
-            color: #ff8c00; /* Laranja como no logo */
-        }
-
-        .btn-comprar {
-            background-color: #ff8c00; /* Laranja como no logo */
-            color: white;
-            padding: 10px 20px;
-            border-radius: 4px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: background-color 0.2s;
-            border: none;
-            cursor: pointer;
-        }
-
-        .btn-comprar:hover {
-            background-color: #e67e00; /* Laranja mais escuro */
+            color: #ff8c00;
         }
 
         .cart-icon {
@@ -116,14 +100,12 @@
             font-weight: bold;
         }
 
-        /* CONTAINER */
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 16px;
         }
 
-        /* PÁGINAS */
         .page {
             display: none;
         }
@@ -132,12 +114,11 @@
             display: block;
         }
 
-        /* HERO SECTION */
+        /* HERO */
         .hero {
             background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
             color: white;
             padding: 60px 0;
-            text-align: center;
         }
 
         .hero-content {
@@ -166,6 +147,17 @@
             border-radius: 20px;
             font-size: 14px;
             margin-bottom: 16px;
+        }
+
+        .urgency-badge {
+            display: inline-block;
+            background-color: #ef4444;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            margin-bottom: 16px;
+            margin-left: 8px;
+            font-weight: bold;
         }
 
         .price-hero {
@@ -212,24 +204,6 @@
             background-color: #047857;
         }
 
-        .btn-secondary {
-            background-color: rgba(255, 255, 255, 0.2);
-            color: white;
-            padding: 14px 32px;
-            border: 2px solid white;
-            border-radius: 4px;
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: all 0.2s;
-            flex: 1;
-        }
-
-        .btn-secondary:hover {
-            background-color: white;
-            color: #1e3a8a;
-        }
-
         .hero-image {
             position: relative;
             height: 400px;
@@ -245,8 +219,45 @@
             filter: drop-shadow(0 10px 30px rgba(0,0,0,0.2));
         }
 
-        /* SEÇÃO DE VÍDEO ANÚNCIO */
-        .video-section {
+        /* PROVA SOCIAL */
+        .social-proof-section {
+            padding: 40px 0;
+            background: white;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .social-proof-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            text-align: center;
+        }
+
+        .proof-item {
+            padding: 20px;
+        }
+
+        .proof-rating {
+            font-size: 28px;
+            font-weight: bold;
+            color: #ffc107;
+            margin-bottom: 8px;
+        }
+
+        .proof-stars {
+            font-size: 18px;
+            color: #ffc107;
+            margin-bottom: 8px;
+        }
+
+        .proof-text {
+            font-size: 14px;
+            color: #666;
+            font-weight: 500;
+        }
+
+        /* BENEFÍCIOS */
+        .benefits-section {
             padding: 60px 0;
             background: white;
         }
@@ -256,99 +267,56 @@
             font-weight: bold;
             margin-bottom: 12px;
             color: #000;
+            text-align: center;
         }
 
         .section-subtitle {
             font-size: 16px;
             color: #666;
             margin-bottom: 40px;
+            text-align: center;
         }
 
-        .video-grid {
+        .benefits-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-            margin-bottom: 40px;
+            gap: 30px;
         }
 
-        .video-card {
-            background: #f5f5f5;
+        .benefit-card {
+            background: #f8f9fa;
+            padding: 30px;
             border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: center;
+            border: 2px solid transparent;
+            transition: all 0.3s;
         }
 
-        .video-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+        .benefit-card:hover {
+            border-color: #ff8c00;
+            box-shadow: 0 4px 12px rgba(255, 140, 0, 0.1);
         }
 
-        .video-placeholder {
-            width: 100%;
-            aspect-ratio: 16 / 9;
-            background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            position: relative;
-            overflow: hidden;
+        .benefit-icon {
+            font-size: 40px;
+            color: #ff8c00;
+            margin-bottom: 16px;
         }
 
-        .video-placeholder::before {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.3);
-            transition: background 0.3s;
-        }
-
-        .video-card:hover .video-placeholder::before {
-            background: rgba(0,0,0,0.5);
-        }
-
-        .play-button {
-            width: 80px;
-            height: 80px;
-            background-color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 32px;
-            color: #2563eb;
-            position: relative;
-            z-index: 1;
-            transition: transform 0.3s;
-        }
-
-        .video-card:hover .play-button {
-            transform: scale(1.1);
-        }
-
-        .video-title {
-            padding: 16px;
+        .benefit-card h3 {
+            font-size: 18px;
             font-weight: bold;
-            font-size: 16px;
+            margin-bottom: 12px;
             color: #000;
         }
 
-        .video-description {
-            padding: 0 16px 16px;
+        .benefit-card p {
             font-size: 14px;
             color: #666;
+            line-height: 1.6;
         }
 
-        .video-player {
-            aspect-ratio: 16 / 9;
-            background: #000;
-            border-radius: 8px 8px 0 0;
-            cursor: pointer;
-        }
-
-        /* GALERIA DE FOTOS COM ZOOM */
+        /* GALERIA */
         .gallery-section {
             padding: 60px 0;
             background: white;
@@ -483,43 +451,248 @@
             line-height: 1.8;
         }
 
-        .gallery-specs {
-            background: #f8f9fa;
-            padding: 20px;
+        /* VÍDEOS */
+        .video-section {
+            padding: 60px 0;
+            background: white;
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+
+        .video-card {
+            background: #f5f5f5;
             border-radius: 8px;
-            border-left: 4px solid #ff8c00;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
         }
 
-        .gallery-specs h4 {
-            font-size: 14px;
+        .video-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+        }
+
+        .video-player {
+            aspect-ratio: 16 / 9;
+            background: #000;
+            cursor: pointer;
+        }
+
+        .video-title {
+            padding: 16px;
             font-weight: bold;
+            font-size: 16px;
             color: #000;
-            margin-bottom: 12px;
-            text-transform: uppercase;
         }
 
-        .gallery-specs ul {
-            list-style: none;
-        }
-
-        .gallery-specs li {
-            padding: 8px 0;
+        .video-description {
+            padding: 0 16px 16px;
             font-size: 14px;
             color: #666;
-            border-bottom: 1px solid #e5e7eb;
         }
 
-        .gallery-specs li:last-child {
-            border-bottom: none;
+        /* OFERTA DIA DAS MÃES */
+        .maes-section {
+            padding: 60px 0;
+            background: linear-gradient(135deg, #fff5f7 0%, #fce4ec 100%);
         }
 
-        .gallery-specs strong {
-            color: #000;
+        .maes-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .maes-tag {
             display: inline-block;
-            width: 120px;
+            background-color: #e91e63;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: bold;
+            margin-bottom: 16px;
         }
 
-        /* ESPECIFICAÇÕES TÉCNICAS */
+        .maes-header h2 {
+            font-size: 36px;
+            font-weight: bold;
+            color: #1a1a1a;
+            margin-bottom: 16px;
+            line-height: 1.3;
+        }
+
+        .maes-header h2 span {
+            color: #e91e63;
+        }
+
+        .maes-header p {
+            font-size: 16px;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .maes-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        .maes-brindes-title {
+            font-size: 16px;
+            font-weight: bold;
+            color: #1a1a1a;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .maes-brindes-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .maes-brinde-item {
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+            background: white;
+            padding: 16px;
+            border-radius: 8px;
+        }
+
+        .maes-brinde-icon {
+            font-size: 24px;
+            color: #e91e63;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: #fce4ec;
+            border-radius: 50%;
+        }
+
+        .maes-brinde-info {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .maes-brinde-info strong {
+            color: #1a1a1a;
+            font-size: 14px;
+        }
+
+        .maes-brinde-info span {
+            color: #666;
+            font-size: 13px;
+        }
+
+        .maes-cta-box {
+            background: white;
+            padding: 32px;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(233, 30, 99, 0.1);
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .maes-cta-icon {
+            font-size: 40px;
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .maes-cta-box h3 {
+            font-size: 22px;
+            font-weight: bold;
+            color: #1a1a1a;
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
+
+        .maes-cta-box p {
+            font-size: 15px;
+            color: #666;
+            margin-bottom: 24px;
+            line-height: 1.6;
+        }
+
+        .maes-price-block {
+            background: linear-gradient(135deg, #fff5f7 0%, #fce4ec 100%);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 24px;
+        }
+
+        .maes-price-label {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #e91e63;
+            font-weight: bold;
+            margin-bottom: 6px;
+        }
+
+        .maes-price-value {
+            font-size: 34px;
+            font-weight: bold;
+            color: #1a1a1a;
+            line-height: 1;
+            margin-bottom: 4px;
+        }
+
+        .maes-price-installment {
+            font-size: 13px;
+            color: #777;
+        }
+
+        .btn-maes {
+            width: 100%;
+            padding: 16px 24px;
+            background: linear-gradient(135deg, #e91e63 0%, #c2185b 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.25s;
+            letter-spacing: 0.5px;
+            box-shadow: 0 4px 16px rgba(233,30,99,0.3);
+        }
+
+        .btn-maes:hover {
+            background: linear-gradient(135deg, #c2185b 0%, #ad1457 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(233,30,99,0.4);
+        }
+
+        .maes-badge-entrega {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 16px;
+            font-size: 13px;
+            color: #777;
+        }
+
+        .maes-badge-entrega i {
+            color: #059669;
+        }
+
+        /* ESPECIFICAÇÕES */
         .specs-section {
             padding: 60px 0;
             background: #f8f9fa;
@@ -722,68 +895,49 @@
             line-height: 1.5;
         }
 
-        /* DOWNLOADS */
-        .downloads-section {
+        /* CONFIANÇA */
+        .trust-section {
             padding: 60px 0;
             background: white;
         }
 
-        .downloads-grid {
+        .trust-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
+            gap: 30px;
         }
 
-        .download-card {
-            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
-            padding: 32px;
-            border-radius: 8px;
+        .trust-card {
             text-align: center;
-            border: 2px solid #bfdbfe;
+            padding: 30px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border: 2px solid transparent;
             transition: all 0.3s;
-            cursor: pointer;
         }
 
-        .download-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 16px rgba(37, 99, 235, 0.15);
-            border-color: #2563eb;
+        .trust-card:hover {
+            border-color: #059669;
+            box-shadow: 0 4px 12px rgba(5, 150, 105, 0.1);
         }
 
-        .download-icon {
+        .trust-icon {
             font-size: 48px;
-            color: #2563eb;
+            color: #059669;
             margin-bottom: 16px;
         }
 
-        .download-title {
+        .trust-card h3 {
+            font-size: 18px;
             font-weight: bold;
-            font-size: 16px;
+            margin-bottom: 12px;
             color: #000;
-            margin-bottom: 8px;
         }
 
-        .download-description {
+        .trust-card p {
             font-size: 14px;
             color: #666;
-            margin-bottom: 16px;
-        }
-
-        .download-btn {
-            background-color: #2563eb;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-weight: bold;
-            transition: background-color 0.2s;
-            display: inline-block;
-            text-decoration: none;
-        }
-
-        .download-btn:hover {
-            background-color: #1d4ed8;
+            line-height: 1.6;
         }
 
         /* CTA FINAL */
@@ -796,8 +950,8 @@
 
         .cta-content h2 {
             font-size: 36px;
-            margin-bottom: 16px;
             font-weight: bold;
+            margin-bottom: 16px;
         }
 
         .cta-content p {
@@ -810,7 +964,6 @@
             display: flex;
             gap: 16px;
             justify-content: center;
-            flex-wrap: wrap;
         }
 
         .btn-cta-primary {
@@ -831,68 +984,87 @@
 
         /* FOOTER */
         .footer {
-            background-color: #0f172a;
-            color: #999;
             padding: 40px 0;
+            background-color: #001f3f;
+            color: white;
             text-align: center;
             font-size: 14px;
         }
 
-        /* CARRINHO */
-        .cart-page {
-            padding: 24px 0;
+        .footer p {
+            margin-bottom: 8px;
         }
 
-        .cart-header {
-            background: white;
-            padding: 16px;
-            border-radius: 4px;
-            margin-bottom: 16px;
+        /* PÁGINAS */
+        .cart-page,
+        .checkout-page,
+        .success-page {
+            padding: 40px 0;
+        }
+
+        .cart-header,
+        .checkout-header {
             display: flex;
             align-items: center;
-            gap: 12px;
-        }
-
-        .cart-header h2 {
-            font-size: 20px;
+            gap: 16px;
+            margin-bottom: 40px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #e5e7eb;
         }
 
         .back-btn {
             background: none;
             border: none;
-            font-size: 20px;
+            font-size: 24px;
             cursor: pointer;
-            color: #2563eb;
+            color: #333;
         }
 
-        .cart-layout {
+        .cart-layout,
+        .checkout-layout {
             display: grid;
-            grid-template-columns: 1fr 320px;
-            gap: 16px;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
         }
 
         .cart-items {
-            background: white;
-            border-radius: 4px;
-            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .empty-cart {
+            text-align: center;
+            padding: 60px 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+
+        .empty-cart-icon {
+            font-size: 64px;
+            color: #ccc;
+            margin-bottom: 16px;
+        }
+
+        .empty-cart p {
+            color: #999;
+            font-size: 16px;
         }
 
         .cart-item {
             display: grid;
-            grid-template-columns: 80px 1fr auto;
-            gap: 16px;
-            padding: 16px;
-            border-bottom: 1px solid #f5f5f5;
+            grid-template-columns: 100px 1fr 120px;
+            gap: 20px;
+            padding: 20px;
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
             align-items: start;
         }
 
-        .cart-item:last-child {
-            border-bottom: none;
-        }
-
         .cart-item-image {
-            width: 80px;
-            height: 80px;
+            width: 100px;
+            height: 100px;
             background: #f5f5f5;
             border-radius: 4px;
             overflow: hidden;
@@ -906,179 +1078,115 @@
 
         .cart-item-details h3 {
             font-size: 14px;
+            font-weight: bold;
             margin-bottom: 8px;
         }
 
         .cart-item-price {
-            color: #059669;
+            font-size: 16px;
             font-weight: bold;
-            margin-bottom: 8px;
+            color: #059669;
+            margin-bottom: 12px;
         }
 
         .quantity-control {
             display: flex;
             align-items: center;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            width: fit-content;
-            margin-bottom: 8px;
+            gap: 8px;
+            margin-bottom: 12px;
         }
 
         .quantity-control button {
-            background: none;
-            border: none;
-            width: 28px;
-            height: 28px;
+            width: 30px;
+            height: 30px;
+            border: 1px solid #ddd;
+            background: white;
+            border-radius: 4px;
             cursor: pointer;
-            font-size: 14px;
-            color: #666;
-        }
-
-        .quantity-control span {
-            width: 40px;
-            text-align: center;
-            border-left: 1px solid #ddd;
-            border-right: 1px solid #ddd;
-            font-size: 14px;
+            font-weight: bold;
         }
 
         .remove-btn {
-            color: #2563eb;
+            color: #ef4444;
             font-size: 12px;
             cursor: pointer;
             text-decoration: none;
         }
 
-        .cart-item-actions {
+        .cart-item-total {
+            font-size: 16px;
+            font-weight: bold;
             text-align: right;
         }
 
-        .cart-item-total {
-            font-weight: bold;
-            font-size: 16px;
-            color: #000;
-            margin-bottom: 8px;
-        }
-
-        .cart-summary {
+        .cart-summary,
+        .checkout-summary {
             background: white;
-            border-radius: 4px;
-            padding: 16px;
+            padding: 24px;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
             height: fit-content;
-            position: sticky;
-            top: 80px;
         }
 
         .summary-title {
             font-size: 14px;
             font-weight: bold;
-            margin-bottom: 12px;
+            text-transform: uppercase;
+            color: #666;
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid #e5e7eb;
         }
 
-        .summary-row {
+        .summary-row,
+        .summary-item {
             display: flex;
             justify-content: space-between;
-            font-size: 14px;
             margin-bottom: 12px;
-            padding-bottom: 12px;
-            border-bottom: 1px solid #f5f5f5;
+            font-size: 14px;
         }
 
-        .summary-row.total {
-            border-bottom: none;
-            font-size: 18px;
+        .summary-row.total,
+        .summary-item.total {
+            font-size: 16px;
             font-weight: bold;
-            color: #000;
+            padding-top: 12px;
+            border-top: 1px solid #e5e7eb;
+            margin-top: 12px;
         }
 
-        .summary-row.total .value {
-            color: #059669;
-        }
-
-        .checkout-btn {
+        .checkout-btn,
+        .finish-btn {
             width: 100%;
-            padding: 12px;
-            background-color: #3b82f6;
+            padding: 14px;
+            background-color: #059669;
             color: white;
             border: none;
             border-radius: 4px;
             font-size: 14px;
             font-weight: bold;
             cursor: pointer;
-            margin-top: 12px;
-            transition: background-color 0.2s;
+            margin-top: 16px;
         }
 
-        .checkout-btn:hover {
-            background-color: #2563eb;
-        }
-
-        .empty-cart {
-            text-align: center;
-            padding: 60px 20px;
-            background: white;
-            border-radius: 4px;
-        }
-
-        .empty-cart-icon {
-            font-size: 64px;
-            color: #ddd;
-            margin-bottom: 16px;
-        }
-
-        /* CHECKOUT */
-        .checkout-page {
-            padding: 24px 0;
-        }
-
-        .checkout-layout {
-            display: grid;
-            grid-template-columns: 1fr 320px;
-            gap: 16px;
+        .checkout-btn:hover,
+        .finish-btn:hover {
+            background-color: #047857;
         }
 
         .checkout-section {
             background: white;
-            border-radius: 4px;
             padding: 24px;
-            margin-bottom: 16px;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            margin-bottom: 24px;
         }
 
         .section-title-checkout {
-            font-size: 18px;
+            font-size: 16px;
             font-weight: bold;
             margin-bottom: 16px;
-            padding-bottom: 12px;
-            border-bottom: 2px solid #3b82f6;
-        }
-
-        .form-group {
-            margin-bottom: 16px;
-        }
-
-        .form-group label {
-            display: block;
-            font-size: 14px;
-            font-weight: bold;
-            margin-bottom: 6px;
-            color: #333;
-        }
-
-        .form-group input,
-        .form-group select {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            font-size: 14px;
-            font-family: inherit;
-        }
-
-        .form-group input:focus,
-        .form-group select:focus {
-            outline: none;
-            border-color: #2563eb;
-            box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.1);
+            color: #000;
         }
 
         .form-row {
@@ -1087,17 +1195,40 @@
             gap: 16px;
         }
 
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 16px;
+        }
+
+        .form-group label {
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 6px;
+            color: #333;
+        }
+
+        .form-group input,
+        .form-group select {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
         .payment-methods {
             display: flex;
             flex-direction: column;
             gap: 12px;
+            margin-bottom: 16px;
         }
 
         .payment-method {
             display: flex;
             align-items: center;
+            gap: 12px;
             padding: 12px;
-            border: 2px solid #ddd;
+            border: 2px solid #e5e7eb;
             border-radius: 4px;
             cursor: pointer;
             transition: all 0.2s;
@@ -1105,24 +1236,20 @@
 
         .payment-method:hover {
             border-color: #2563eb;
-            background: #f9f9f9;
+            background: #f8f9fa;
         }
 
         .payment-method input[type="radio"] {
-            margin-right: 12px;
             cursor: pointer;
-            width: 18px;
-            height: 18px;
         }
 
         .payment-method-label {
             flex: 1;
-            cursor: pointer;
         }
 
         .payment-method-title {
             font-weight: bold;
-            font-size: 14px;
+            color: #000;
             margin-bottom: 4px;
         }
 
@@ -1133,142 +1260,60 @@
 
         .payment-details {
             display: none;
-            margin-top: 16px;
-            padding-top: 16px;
-            border-top: 1px solid #ddd;
+            padding: 16px;
+            background: #f8f9fa;
+            border-radius: 4px;
+            margin-bottom: 16px;
         }
 
         .payment-details.show {
             display: block;
         }
 
-        .checkout-summary {
-            background: white;
-            border-radius: 4px;
-            padding: 16px;
-            height: fit-content;
-            position: sticky;
-            top: 80px;
-        }
-
-        .summary-item {
-            display: flex;
-            justify-content: space-between;
-            font-size: 14px;
-            margin-bottom: 12px;
-            padding-bottom: 12px;
-            border-bottom: 1px solid #f5f5f5;
-        }
-
-        .summary-item.total {
-            border-bottom: none;
-            font-size: 16px;
-            font-weight: bold;
-            color: #000;
-        }
-
-        .summary-item.total .value {
-            color: #059669;
-        }
-
-        .finish-btn {
-            width: 100%;
-            padding: 12px;
-            background-color: #059669;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            font-size: 14px;
-            font-weight: bold;
-            cursor: pointer;
-            margin-top: 12px;
-            transition: background-color 0.2s;
-        }
-
-        .finish-btn:hover {
-            background-color: #047857;
-        }
-
-        .finish-btn:disabled {
-            background-color: #ccc;
-            cursor: not-allowed;
-        }
-
-        /* SUCCESS PAGE */
-        .success-page {
-            padding: 60px 0;
-        }
-
         .success-container {
-            background: white;
-            border-radius: 4px;
-            padding: 40px;
             text-align: center;
-            max-width: 600px;
-            margin: 0 auto;
+            padding: 60px 20px;
+            background: white;
+            border-radius: 8px;
         }
 
         .success-icon {
             font-size: 80px;
             color: #059669;
-            margin-bottom: 20px;
-            animation: bounce 0.6s ease;
+            margin-bottom: 24px;
         }
 
-        @keyframes bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-        }
-
-        .success-title {
-            font-size: 28px;
+        .success-container h2 {
+            font-size: 32px;
             font-weight: bold;
-            margin-bottom: 12px;
+            margin-bottom: 16px;
             color: #000;
         }
 
-        .success-message {
+        .success-container p {
             font-size: 16px;
             color: #666;
-            margin-bottom: 24px;
-        }
-
-        .order-number {
-            background: #f5f5f5;
-            padding: 16px;
-            border-radius: 4px;
-            margin-bottom: 24px;
-            font-size: 14px;
-        }
-
-        .order-number-label {
-            color: #666;
-            margin-bottom: 4px;
-        }
-
-        .order-number-value {
-            font-size: 24px;
-            font-weight: bold;
-            color: #3b82f6;
+            margin-bottom: 32px;
         }
 
         .success-details {
-            background: #f5f5f5;
-            padding: 16px;
-            border-radius: 4px;
-            margin-bottom: 24px;
+            background: #f8f9fa;
+            padding: 24px;
+            border-radius: 8px;
+            margin-bottom: 32px;
             text-align: left;
-            font-size: 14px;
         }
 
         .success-details-row {
             display: flex;
             justify-content: space-between;
-            margin-bottom: 12px;
+            padding: 12px 0;
+            border-bottom: 1px solid #e5e7eb;
+            font-size: 14px;
         }
 
         .success-details-row:last-child {
-            margin-bottom: 0;
+            border-bottom: none;
         }
 
         .success-buttons {
@@ -1278,316 +1323,29 @@
         }
 
         .btn-continue {
-            padding: 12px 24px;
-            background-color: #3b82f6;
+            background-color: #2563eb;
             color: white;
+            padding: 14px 32px;
             border: none;
             border-radius: 4px;
             font-size: 14px;
             font-weight: bold;
             cursor: pointer;
-            transition: background-color 0.2s;
         }
 
         .btn-continue:hover {
-            background-color: #2563eb;
+            background-color: #1d4ed8;
         }
 
-        /* MODAL DE VÍDEO */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0,0,0,0.8);
-            animation: fadeIn 0.3s;
-        }
-
-        .modal.active {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        .modal-content {
-            background-color: #000;
-            position: relative;
-            max-width: 900px;
-            width: 90%;
-            aspect-ratio: 16 / 9;
-            border-radius: 8px;
-            overflow: hidden;
-        }
-
-        .close-modal {
-            position: absolute;
-            right: 20px;
-            top: 20px;
-            font-size: 32px;
-            color: white;
-            cursor: pointer;
-            z-index: 10;
-            background: rgba(0,0,0,0.5);
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: none;
-        }
-
-        .modal-video {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        /* DIA DAS MAES - SECAO BRINDE */
-        .maes-section {
-            padding: 70px 0;
-            background: linear-gradient(135deg, #fff5f7 0%, #fce4ec 100%);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .maes-section::before {
-            content: '';
-            position: absolute;
-            top: -60px;
-            right: -60px;
-            width: 300px;
-            height: 300px;
-            background: radial-gradient(circle, rgba(233,30,99,0.08) 0%, transparent 70%);
-            border-radius: 50%;
-        }
-
-        .maes-section::after {
-            content: '';
-            position: absolute;
-            bottom: -80px;
-            left: -80px;
-            width: 400px;
-            height: 400px;
-            background: radial-gradient(circle, rgba(233,30,99,0.06) 0%, transparent 70%);
-            border-radius: 50%;
-        }
-
-        .maes-header {
-            text-align: center;
-            margin-bottom: 48px;
-        }
-
-        .maes-tag {
-            display: inline-block;
-            background: linear-gradient(135deg, #e91e63 0%, #c2185b 100%);
-            color: white;
-            padding: 6px 20px;
-            border-radius: 20px;
-            font-size: 13px;
-            font-weight: bold;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            margin-bottom: 16px;
-        }
-
-        .maes-header h2 {
-            font-size: 36px;
-            font-weight: bold;
-            color: #1a1a1a;
-            margin-bottom: 12px;
-            line-height: 1.2;
-        }
-
-        .maes-header h2 span {
-            color: #e91e63;
-        }
-
-        .maes-header p {
-            font-size: 17px;
-            color: #555;
-            max-width: 560px;
-            margin: 0 auto;
-            line-height: 1.7;
-        }
-
-        .maes-layout {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 48px;
-            align-items: center;
-        }
-
-        .maes-brindes-title {
-            font-size: 13px;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: #e91e63;
-            margin-bottom: 20px;
-        }
-
-        .maes-brindes-list {
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-            margin-bottom: 32px;
-        }
-
-        .maes-brinde-item {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-            background: white;
-            padding: 18px 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 12px rgba(233,30,99,0.08);
-            border-left: 4px solid #e91e63;
-            transition: transform 0.25s, box-shadow 0.25s;
-        }
-
-        .maes-brinde-item:hover {
-            transform: translateX(4px);
-            box-shadow: 0 4px 20px rgba(233,30,99,0.14);
-        }
-
-        .maes-brinde-icon {
-            width: 48px;
-            height: 48px;
-            background: linear-gradient(135deg, #fce4ec 0%, #f8bbd0 100%);
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 22px;
-            color: #e91e63;
-            flex-shrink: 0;
-        }
-
-        .maes-brinde-info strong {
-            display: block;
-            font-size: 15px;
-            color: #1a1a1a;
-            margin-bottom: 3px;
-        }
-
-        .maes-brinde-info span {
-            font-size: 13px;
-            color: #777;
-        }
-
-        .maes-cta-box {
-            background: white;
-            border-radius: 16px;
-            padding: 36px;
-            box-shadow: 0 4px 24px rgba(233,30,99,0.1);
-            text-align: center;
-            border: 2px solid #f8bbd0;
-            position: relative;
-            z-index: 1;
-        }
-
-        .maes-cta-icon {
-            font-size: 56px;
-            margin-bottom: 16px;
-            display: block;
-        }
-
-        .maes-cta-box h3 {
-            font-size: 22px;
-            font-weight: bold;
-            color: #1a1a1a;
-            margin-bottom: 10px;
-            line-height: 1.3;
-        }
-
-        .maes-cta-box p {
-            font-size: 15px;
-            color: #666;
-            margin-bottom: 24px;
-            line-height: 1.6;
-        }
-
-        .maes-price-block {
-            background: linear-gradient(135deg, #fff5f7 0%, #fce4ec 100%);
-            border-radius: 10px;
-            padding: 20px;
-            margin-bottom: 24px;
-        }
-
-        .maes-price-label {
-            font-size: 12px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            color: #e91e63;
-            font-weight: bold;
-            margin-bottom: 6px;
-        }
-
-        .maes-price-value {
-            font-size: 34px;
-            font-weight: bold;
-            color: #1a1a1a;
-            line-height: 1;
-            margin-bottom: 4px;
-        }
-
-        .maes-price-installment {
-            font-size: 13px;
-            color: #777;
-        }
-
-        .btn-maes {
-            width: 100%;
-            padding: 16px 24px;
-            background: linear-gradient(135deg, #e91e63 0%, #c2185b 100%);
-            color: white;
-            border: none;
-            border-radius: 8px;
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: all 0.25s;
-            letter-spacing: 0.5px;
-            box-shadow: 0 4px 16px rgba(233,30,99,0.3);
-        }
-
-        .btn-maes:hover {
-            background: linear-gradient(135deg, #c2185b 0%, #ad1457 100%);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(233,30,99,0.4);
-        }
-
-        .maes-badge-entrega {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            margin-top: 16px;
-            font-size: 13px;
-            color: #777;
-        }
-
-        .maes-badge-entrega i {
-            color: #059669;
-        }
-
-        /* RESPONSIVO */
         @media (max-width: 768px) {
             .hero-content,
             .specs-grid,
-            .downloads-grid,
             .reviews-grid,
-            .video-grid {
+            .video-grid,
+            .benefits-grid,
+            .trust-grid,
+            .social-proof-container,
+            .maes-layout {
                 grid-template-columns: 1fr;
             }
 
@@ -1597,10 +1355,6 @@
 
             .section-title {
                 font-size: 24px;
-            }
-
-            .nav-links {
-                gap: 12px;
             }
 
             .hero-buttons {
@@ -1616,37 +1370,33 @@
                 grid-template-columns: 1fr;
             }
 
-            .maes-layout {
-                grid-template-columns: 1fr;
-            }
-
-            .maes-header h2 {
-                font-size: 26px;
-            }
-
-            .maes-cta-box {
-                padding: 24px 20px;
-            }
-
             .form-row {
                 grid-template-columns: 1fr;
+            }
+
+            .gallery-left {
+                width: 100%;
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+            .gallery-container {
+                grid-template-columns: 1fr;
+                gap: 20px;
             }
         }
     </style>
 </head>
 <body>
 
-    <!-- NAVBAR -->
     <nav class="navbar">
         <div class="navbar-container">
             <div class="logo" onclick="goToLanding()">
                 <img src="eletroshop_logo.png" alt="EletroShop" style="height: 40px; object-fit: contain;">
             </div>
             <div class="nav-links">
+                <a href="#hero" onclick="scrollToSection('hero')">Topo</a>
+                <a href="#gallery" onclick="scrollToSection('gallery')">Galeria</a>
                 <a href="#videos" onclick="scrollToSection('videos')">Vídeos</a>
-                <a href="#specs" onclick="scrollToSection('specs')">Especificações</a>
-                <a href="#reviews" onclick="scrollToSection('reviews')">Avaliações</a>
-                <a href="#downloads" onclick="scrollToSection('downloads')">Downloads</a>
                 <div class="cart-icon" onclick="goToCart()">
                     <i class="fas fa-shopping-cart"></i>
                     <span class="cart-badge" id="cart-count">0</span>
@@ -1655,15 +1405,16 @@
         </div>
     </nav>
 
-    <!-- LANDING PAGE -->
     <div class="page active" id="landing-page">
-        <!-- HERO SECTION -->
         <section class="hero" id="hero">
             <div class="container">
                 <div class="hero-content">
                     <div class="hero-text">
                         <div class="hero-badge">
                             <i class="fas fa-star"></i> Melhor Custo-Benefício 2026
+                        </div>
+                        <div class="urgency-badge">
+                            ⏰ Oferta Dia das Mães
                         </div>
                         <h1>Lava e Seca LG ThinQ Branca</h1>
                         <p>Tecnologia inteligente com IA que detecta o tipo de tecido automaticamente. Lave e seque suas roupas em uma única máquina com máxima eficiência energética.</p>
@@ -1679,21 +1430,147 @@
                             <button class="btn-primary" onclick="addToCartAndGo()">
                                 <i class="fas fa-shopping-cart"></i> COMPRAR AGORA
                             </button>
-                            <button class="btn-secondary" onclick="scrollToSection('videos')">
-                                <i class="fas fa-play"></i> VER VÍDEO
-                            </button>
                         </div>
                     </div>
 
                     <div class="hero-image">
-                        <!-- 📷 EDITE AQUI: Imagem principal do HERO (seção de topo) -->
                         <img src="01.jpeg" alt="Lava e Seca LG ThinQ">
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- GALERIA DE FOTOS COM ZOOM -->
+        <section class="benefits-section" id="benefits">
+            <div class="container">
+                <h2 class="section-title">Por Que Escolher a LG ThinQ?</h2>
+                <p class="section-subtitle">Transforme sua rotina com tecnologia inteligente</p>
+
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>Inteligência Artificial</h3>
+                        <p>Detecta automaticamente o tipo de tecido e ajusta o ciclo de lavagem para máxima eficiência e cuidado.</p>
+                    </div>
+
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <h3>Economia de Energia</h3>
+                        <p>Reduz consumo de água e energia em cada lavagem. Sua conta de luz cai significativamente.</p>
+                    </div>
+
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-volume-mute"></i>
+                        </div>
+                        <h3>Silêncio Total</h3>
+                        <p>Motor Inverter ultra silencioso permite lavar a qualquer hora do dia ou da noite.</p>
+                    </div>
+
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-check-double"></i>
+                        </div>
+                        <h3>Lave e Seque</h3>
+                        <p>Tudo em um único ciclo. Sem esforço, sem complicação. Praticidade total.</p>
+                    </div>
+
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3>Controle via App</h3>
+                        <p>Controle total via Wi-Fi e comando de voz. Monitore sua lavagem de qualquer lugar.</p>
+                    </div>
+
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Proteção de Tecidos</h3>
+                        <p>Lavagem a vapor elimina 99,9% dos alérgenos e cuida das fibras delicadas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="maes-section" id="dia-das-maes">
+            <div class="container">
+
+                <div class="maes-header">
+                    <div class="maes-tag">&#10084; Dia das M&atilde;es</div>
+                    <h2>O Presente que <span>Facilita a Vida</span> de Verdade</h2>
+                    <p>Dia das M&atilde;es &eacute; a ocasi&atilde;o perfeita para presentear com algo que transforma a rotina. A Lava e Seca LG ThinQ &eacute; o presente que toda m&atilde;e merece &mdash; pr&aacute;tico, inteligente e cheio de cuidado.</p>
+                </div>
+
+                <div class="maes-layout">
+
+                    <div>
+                        <p class="maes-brindes-title">&#127873; Compre agora e ganhe o kit brinde exclusivo</p>
+                        <ul class="maes-brindes-list">
+                            <li class="maes-brinde-item">
+                                <div class="maes-brinde-icon">
+                                    <i class="fas fa-soap"></i>
+                                </div>
+                                <div class="maes-brinde-info">
+                                    <strong>Kit Lavanderia Premium</strong>
+                                    <span>Sab&atilde;o, amaciante e tira-manchas selecionados especialmente para a LG ThinQ</span>
+                                </div>
+                            </li>
+                            <li class="maes-brinde-item">
+                                <div class="maes-brinde-icon">
+                                    <i class="fas fa-box-open"></i>
+                                </div>
+                                <div class="maes-brinde-info">
+                                    <strong>Cesto Organizador</strong>
+                                    <span>Cesto de roupa premium para manter a lavanderia sempre organizada e com estilo</span>
+                                </div>
+                            </li>
+                            <li class="maes-brinde-item">
+                                <div class="maes-brinde-icon">
+                                    <i class="fas fa-ticket-alt"></i>
+                                </div>
+                                <div class="maes-brinde-info">
+                                    <strong>Voucher de Limpeza Dom&eacute;stica</strong>
+                                    <span>1 sess&atilde;o de limpeza profissional para estrear a m&aacute;quina com tudo organizado</span>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <p style="font-size: 13px; color: #999; border-top: 1px solid #f8bbd0; padding-top: 16px;">
+                            <i class="fas fa-info-circle" style="color: #e91e63;"></i>
+                            &nbsp;Brindes v&aacute;lidos para compras realizadas at&eacute; o Dia das M&atilde;es. Sujeito a disponibilidade de estoque.
+                        </p>
+                    </div>
+
+                    <div class="maes-cta-box">
+                        <span class="maes-cta-icon">&#128144;</span>
+                        <h3>Surpreenda a sua m&atilde;e com tecnologia e praticidade</h3>
+                        <p>Al&eacute;m do desconto exclusivo de 29%, sua compra vem acompanhada do kit brinde especial de Dia das M&atilde;es, sem custo adicional.</p>
+
+                        <div class="maes-price-block">
+                            <div class="maes-price-label">Promo&ccedil;&atilde;o Dia das M&atilde;es</div>
+                            <div class="maes-price-value">R$ 3.899,00</div>
+                            <div class="maes-price-installment">12x de R$ 324,92 sem juros &bull; ou &agrave; vista com desconto</div>
+                        </div>
+
+                        <button class="btn-maes" onclick="addToCartAndGo()">
+                            <i class="fas fa-gift"></i>&nbsp; GARANTIR MEU PRESENTE + BRINDES
+                        </button>
+
+                        <div class="maes-badge-entrega">
+                            <i class="fas fa-truck"></i>
+                            <span>Entrega r&aacute;pida &bull; Frete para todo o Brasil</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
         <section class="gallery-section" id="gallery">
             <div class="container">
                 <h2 class="section-title">Galeria de Fotos</h2>
@@ -1734,23 +1611,11 @@
                     <div class="gallery-info">
                         <h2>Lava e Seca LG ThinQ Branca</h2>
                         <p>Máquina lava e seca inteligente com tecnologia AI DD que reconhece e lava todos os tipos de tecidos. Com 6 movimentos exclusivos que lavam melhor que 1, oferecendo máxima eficiência e cuidado com suas roupas.</p>
-
-                        <div class="gallery-specs" style="background: linear-gradient(135deg, #fff 0%, #f0f7ff 100%); border-left: 4px solid #059669;">
-                            <h4>Por que escolher a LG ThinQ?</h4>
-                            <p style="font-size: 15px; color: #333; margin-bottom: 10px;"><strong>Tecnologia que entende suas roupas:</strong> Esqueça a dúvida sobre qual ciclo usar. A inteligência artificial protege seus tecidos enquanto entrega a limpeza mais profunda do mercado.</p>
-                            <ul style="list-style: none; padding: 0;">
-                                <li style="margin-bottom: 8px;"><i class="fas fa-star" style="color: #ff8c00; margin-right: 8px;"></i> <strong>Economia Real:</strong> Reduza o consumo de água e energia em cada lavagem.</li>
-                                <li style="margin-bottom: 8px;"><i class="fas fa-star" style="color: #ff8c00; margin-right: 8px;"></i> <strong>Silêncio Total:</strong> Motor Inverter ultra silencioso para lavar a qualquer hora.</li>
-                                <li style="margin-bottom: 8px;"><i class="fas fa-star" style="color: #ff8c00; margin-right: 8px;"></i> <strong>Praticidade:</strong> Lave e seque em um único ciclo, sem esforço.</li>
-                            </ul>
-                            <p style="font-size: 14px; font-weight: bold; color: #059669; margin-top: 10px;">Transforme sua lavanderia em um centro de inteligência!</p>
-                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- VÍDEOS -->
         <section class="video-section" id="videos">
             <div class="container">
                 <h2 class="section-title">Conheça o Produto</h2>
@@ -1774,20 +1639,11 @@
                         <div class="video-title">Como Usar</div>
                         <div class="video-description">Aprenda a usar todos os recursos da máquina</div>
                     </div>
-
-                    <div class="video-card" data-video="unboxing">
-                        <video class="video-player" style="width: 100%; height: 100%; object-fit: cover;" controls preload="metadata">
-                            <source src="unboxing.mp4" type="video/mp4">
-                            Seu navegador não suporta vídeo HTML5.
-                        </video>
-                        <div class="video-title">Unboxing e Instalação</div>
-                        <div class="video-description">Veja o produto chegando e como instalar</div>
-                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- ESPECIFICAÇÕES TÉCNICAS -->
+        <section class="maes-section" id="dia-das-maes">
         <section class="specs-section" id="specs">
             <div class="container">
                 <h2 class="section-title">Especificações Técnicas</h2>
@@ -1795,7 +1651,6 @@
 
                 <div class="specs-grid">
                     <div class="specs-image">
-                        <!-- 📷 EDITE AQUI: Imagem da seção de ESPECIFICAÇÕES -->
                         <img src="06.jpeg">
                     </div>
 
@@ -1864,7 +1719,6 @@
             </div>
         </section>
 
-        <!-- AVALIAÇÕES -->
         <section class="reviews-section" id="reviews">
             <div class="container">
                 <h2 class="section-title">Avaliações de Clientes</h2>
@@ -1945,98 +1799,39 @@
             </div>
         </section>
 
-        <!-- DIA DAS MAES - BRINDE ESPECIAL -->
-        <section class="maes-section" id="dia-das-maes">
+        <section class="trust-section" id="trust">
             <div class="container">
+                <h2 class="section-title">Compre com Confiança</h2>
+                <p class="section-subtitle">Garantia total de segurança e satisfação</p>
 
-                <div class="maes-header">
-                    <div class="maes-tag">&#10084; Dia das M&atilde;es</div>
-                    <h2>O Presente que <span>Facilita a Vida</span> de Verdade</h2>
-                    <p>Dia das M&atilde;es &eacute; a ocasi&atilde;o perfeita para presentear com algo que transforma a rotina. A Lava e Seca LG ThinQ &eacute; o presente que toda m&atilde;e merece &mdash; pr&aacute;tico, inteligente e cheio de cuidado.</p>
-                </div>
-
-                <div class="maes-layout">
-
-                    <!-- BRINDES -->
-                    <div>
-                        <p class="maes-brindes-title">&#127873; Compre agora e ganhe o kit brinde exclusivo</p>
-                        <ul class="maes-brindes-list">
-                            <li class="maes-brinde-item">
-                                <div class="maes-brinde-icon">
-                                    <i class="fas fa-soap"></i>
-                                </div>
-                                <div class="maes-brinde-info">
-                                    <strong>Kit Lavanderia Premium</strong>
-                                    <span>Sabão, amaciante e tira-manchas selecionados especialmente para a LG ThinQ</span>
-                                </div>
-                            </li>
-                            <li class="maes-brinde-item">
-                                <div class="maes-brinde-icon">
-                                    <i class="fas fa-box-open"></i>
-                                </div>
-                                <div class="maes-brinde-info">
-                                    <strong>Cesto Organizador</strong>
-                                    <span>Cesto de roupa premium para manter a lavanderia sempre organizada e com estilo</span>
-                                </div>
-                            </li>
-                            <li class="maes-brinde-item">
-                                <div class="maes-brinde-icon">
-                                    <i class="fas fa-ticket-alt"></i>
-                                </div>
-                                <div class="maes-brinde-info">
-                                    <strong>Voucher de Limpeza Dom&eacute;stica</strong>
-                                    <span>1 sess&atilde;o de limpeza profissional para estrear a m&aacute;quina com tudo organizado</span>
-                                </div>
-                            </li>
-                        </ul>
-
-                        <p style="font-size: 13px; color: #999; border-top: 1px solid #f8bbd0; padding-top: 16px;">
-                            <i class="fas fa-info-circle" style="color: #e91e63;"></i>
-                            &nbsp;Brindes v&aacute;lidos para compras realizadas at&eacute; o Dia das M&atilde;es. Sujeito a disponibilidade de estoque.
-                        </p>
+                <div class="trust-grid">
+                    <div class="trust-card">
+                        <div class="trust-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Garantia de 2 Anos</h3>
+                        <p>Cobertura completa contra defeitos de fabricação. Assistência técnica autorizada em todo o Brasil.</p>
                     </div>
 
-                    <!-- CTA BOX -->
-                    <div class="maes-cta-box">
-                        <span class="maes-cta-icon">&#128144;</span>
-                        <h3>Surpreenda a sua m&atilde;e com tecnologia e praticidade</h3>
-                        <p>Al&eacute;m do desconto exclusivo de 29%, sua compra vem acompanhada do kit brinde especial de Dia das M&atilde;es, sem custo adicional.</p>
-
-                        <div class="maes-price-block">
-                            <div class="maes-price-label">Promo&ccedil;&atilde;o Dia das M&atilde;es</div>
-                            <div class="maes-price-value">R$ 3.899,00</div>
-                            <div class="maes-price-installment">12x de R$ 324,92 sem juros &bull; ou &agrave; vista com desconto</div>
-                        </div>
-
-                        <button class="btn-maes" onclick="addToCartAndGo()">
-                            <i class="fas fa-gift"></i>&nbsp; GARANTIR MEU PRESENTE + BRINDES
-                        </button>
-
-                        <div class="maes-badge-entrega">
+                    <div class="trust-card">
+                        <div class="trust-icon">
                             <i class="fas fa-truck"></i>
-                            <span>Entrega r&aacute;pida &bull; Frete para todo o Brasil</span>
                         </div>
+                        <h3>Entrega Rápida</h3>
+                        <p>Frete para todo o Brasil. Entrega em 7 a 10 dias úteis. Rastreamento em tempo real.</p>
                     </div>
 
+                    <div class="trust-card">
+                        <div class="trust-icon">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <h3>Compra 100% Segura</h3>
+                        <p>Pagamento criptografado. Múltiplas opções de pagamento. Proteção de dados garantida.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- DOWNLOADS E MANUAL -->
-        <section class="downloads-section" id="downloads">
-            <div class="container">
-                <h2 class="section-title">Manual do Usuário</h2>
-                <p class="section-subtitle">Acesse o manual oficial da LG com instruções completas de uso e manutenção</p>
-
-                <div style="text-align: center; padding: 40px 0;">
-                    <a href="https://gscs-manual.lge.com/DFZ/MFL70701220/pt-br/main.html" target="_blank" class="download-btn" style="font-size: 18px; padding: 16px 40px;">
-                        <i class="fas fa-book"></i> Acessar Manual LG
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- CTA FINAL -->
         <section class="cta-section">
             <div class="container">
                 <div class="cta-content">
@@ -2051,7 +1846,6 @@
             </div>
         </section>
 
-        <!-- FOOTER -->
         <footer class="footer">
             <div class="container">
                 <div style="margin-bottom: 16px;">
@@ -2062,7 +1856,6 @@
         </footer>
     </div>
 
-    <!-- PÁGINA DO CARRINHO -->
     <div class="page" id="cart-page">
         <div class="container cart-page">
             <div class="cart-header">
@@ -2102,7 +1895,6 @@
         </div>
     </div>
 
-    <!-- PÁGINA DE CHECKOUT -->
     <div class="page" id="checkout-page">
         <div class="container checkout-page">
             <div class="cart-header">
@@ -2114,7 +1906,6 @@
 
             <div class="checkout-layout">
                 <div>
-                    <!-- Dados Pessoais -->
                     <div class="checkout-section">
                         <div class="section-title-checkout">Dados Pessoais</div>
                         <div class="form-row">
@@ -2141,7 +1932,6 @@
                         </div>
                     </div>
 
-                    <!-- Endereço -->
                     <div class="checkout-section">
                         <div class="section-title-checkout">Endereço de Entrega</div>
                         <div class="form-group">
@@ -2181,7 +1971,6 @@
                         </div>
                     </div>
 
-                    <!-- Pagamento -->
                     <div class="checkout-section">
                         <div class="section-title-checkout">Forma de Pagamento</div>
                         <div class="payment-methods">
@@ -2214,7 +2003,6 @@
                             </label>
                         </div>
 
-                        <!-- Detalhes do Cartão -->
                         <div class="payment-details show" id="credit-details">
                             <div class="form-group">
                                 <label>Número do Cartão *</label>
@@ -2246,19 +2034,16 @@
                             </div>
                         </div>
 
-                        <!-- Detalhes PIX -->
                         <div class="payment-details" id="pix-details">
                             <p style="font-size: 14px; color: #666;">Após confirmar a compra, você receberá um código PIX para escanear e fazer o pagamento instantaneamente.</p>
                         </div>
 
-                        <!-- Detalhes Boleto -->
                         <div class="payment-details" id="boleto-details">
                             <p style="font-size: 14px; color: #666;">Após confirmar a compra, você receberá um boleto bancário para pagar em qualquer banco.</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Resumo do Checkout -->
                 <div class="checkout-summary">
                     <div class="summary-title">RESUMO DA COMPRA</div>
                     <div id="checkout-items"></div>
@@ -2280,22 +2065,20 @@
         </div>
     </div>
 
-    <!-- PÁGINA DE SUCESSO -->
     <div class="page" id="success-page">
         <div class="container success-page">
             <div class="success-container">
                 <div class="success-icon">
                     <i class="fas fa-check-circle"></i>
                 </div>
-                <h1 class="success-title">Compra Realizada com Sucesso!</h1>
-                <p class="success-message">Obrigado pela sua compra. Você receberá um e-mail de confirmação em breve.</p>
-
-                <div class="order-number">
-                    <div class="order-number-label">Número do Pedido</div>
-                    <div class="order-number-value" id="order-number">#ES-000000</div>
-                </div>
+                <h2>Compra Realizada com Sucesso!</h2>
+                <p>Obrigado por sua compra. Você receberá um e-mail de confirmação em breve.</p>
 
                 <div class="success-details">
+                    <div class="success-details-row">
+                        <strong>Número do Pedido:</strong>
+                        <span id="success-order">-</span>
+                    </div>
                     <div class="success-details-row">
                         <strong>Cliente:</strong>
                         <span id="success-name">-</span>
@@ -2321,86 +2104,18 @@
         </div>
     </div>
 
-    <!-- MODAL DE VÍDEO -->
-    <div class="modal" id="videoModal">
-        <div class="modal-content">
-            <button class="close-modal" onclick="closeModal()">&times;</button>
-            <!-- iframe para vídeos do YouTube -->
-            <iframe class="modal-video" id="videoFrame" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="display: none;"></iframe>
-            <!-- étag video para vídeos locais -->
-<video class="modal-video" id="videoLocal" style="display: none;" controls preload="metadata">
-                <source id="videoSource" src="" type="video/mp4">
-                <source id="videoSourceWebm" src="" type="video/webm">
-                Seu navegador não suporta a tag de vídeo.
-            </video>
-        </div>
-    </div>
-
     <script>
-        // ╔════════════════════════════════════════════════════════════════════════════════╗
-        // ║                    CONFIGURAÇÕES DO PRODUTO - EDITE AQUI!                     ║
-        // ║                                                                                ║
-        // ║  ⚠️  IMPORTANTE: Todas as imagens e informações do produto estão aqui.        ║
-        // ║  Você pode editar o nome, preço, descrição e principalmente as IMAGENS!       ║
-        // ╚════════════════════════════════════════════════════════════════════════════════╝
-        
         const product = {
             id: 1,
             name: "Lava e Seca LG ThinQ Branca 10,5kg - Inteligente com IA",
             price: 3899.00,
             originalPrice: 5499.00,
-            // 📷 EDITE AQUI: Coloque a URL da sua imagem principal do produto
             image: "https://images.unsplash.com/photo-1517668808822-9ebb02ae2a0e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
         };
 
         let cart = [];
         let shippingCost = 89.90;
 
-        // ╔════════════════════════════════════════════════════════════════════════════════╗
-        // ║                    ADICIONE SEUS VÍDEOS AQUI - EDITE ABAIXO!                  ║
-        // ║                                                                                ║
-        // ║  🎬 VOCÊ TEM 2 OPÇÕES:                                                        ║
-        // ║                                                                                ║
-        // ║  OPÇÃO 1️⃣  - VÍDEOS DO YOUTUBE (Online):                                      ║
-        // ║  • Faça upload do seu vídeo no YouTube                                        ║
-        // ║  • Clique em "Compartilhar" > "Incorporar"                                   ║
-        // ║  • Copie o link que aparece em src="..."                                     ║
-        // ║  • Cole o link completo abaixo (exemplo: https://www.youtube.com/embed/ABC)   ║
-        // ║                                                                                ║
-        // ║  OPÇÃO 2️⃣  - VÍDEOS LOCAIS (Offline - No seu PC):                             ║
-        // ║  • Coloque seus vídeos (formato .mp4) na MESMA PASTA do arquivo HTML          ║
-        // ║  • Use apenas o nome do arquivo (exemplo: "anuncio.mp4")                     ║
-        // ║  • O sistema detectará automaticamente se é local ou YouTube                  ║
-        // ║                                                                                ║
-        // ║  ESTRUTURA DE PASTAS RECOMENDADA:                                             ║
-        // ║  projeto_unip/                                                                ║
-        // ║    ├─ landing_page_integrada.html                                             ║
-        // ║    ├─ anuncio.mp4                                                             ║
-        // ║    ├─ tutorial.mp4                                                            ║
-        // ║    ├─ unboxing.mp4                                                            ║
-        // ║    ├─ depoimento1.mp4                                                         ║
-        // ║    ├─ depoimento2.mp4                                                         ║
-        // ║    └─ depoimento3.mp4                                                         ║
-        // ╚════════════════════════════════════════════════════════════════════════════════╝
-        
-        const videos = {
-            // 🎬 EDITE AQUI: Vídeo de Anúncio/Apresentação do Produto
-            anuncio: 'anuncio.mp4',
-            
-            // 🎬 EDITE AQUI: Vídeo de Tutorial/Como Usar
-            tutorial: 'uso.mp4',
-            
-            // 🎬 EDITE AQUI: Vídeo de Unboxing/Instalação
-            unboxing: 'unboxing.mp4',
-            
-            // 🎬 EDITE AQUI: Vídeos de Depoimentos (Pessoas que usaram)
-            depoimento1: 'depoimento1.mp4',
-            depoimento2: 'depoimento2.mp4',
-            depoimento3: 'depoimento3.mp4'
-        };
-        // ========================================
-
-        // NAVEGAÇÃO
         function showPage(pageId) {
             document.querySelectorAll('.page').forEach(page => {
                 page.classList.remove('active');
@@ -2462,7 +2177,6 @@
             container.innerHTML = cart.map(item => `
                 <div class="cart-item">
                     <div class="cart-item-image">
-                        <!-- 📷 Imagem do produto no carrinho (vem do objeto product acima) -->
                         <img src="${item.image}" alt="${item.name}">
                     </div>
                     <div class="cart-item-details">
@@ -2542,119 +2256,31 @@
 
         function finishPurchase() {
             const firstName = document.getElementById('first-name').value;
-            const lastName = document.getElementById('last-name').value;
-            const cpf = document.getElementById('cpf').value;
             const email = document.getElementById('email').value;
+            const subtotal = cart.reduce((acc, item) => acc + (item.price * item.quantity), 0);
+            const total = subtotal + shippingCost;
 
-            if (!firstName || !lastName || !cpf || !email) {
-                alert('Por favor, preencha todos os campos obrigatórios');
-                return;
-            }
+            document.getElementById('success-order').textContent = '#' + Math.random().toString(36).substr(2, 9).toUpperCase();
+            document.getElementById('success-name').textContent = firstName;
+            document.getElementById('success-email').textContent = email;
+            document.getElementById('success-total').textContent = `R$ ${total.toLocaleString('pt-BR', {minimumFractionDigits: 2})}`;
 
-            const btn = event.target;
-            btn.disabled = true;
-            btn.textContent = 'PROCESSANDO...';
-
-            setTimeout(() => {
-                const subtotal = cart.reduce((acc, item) => acc + (item.price * item.quantity), 0);
-                const total = subtotal + shippingCost;
-                const orderNumber = '#ES-' + Math.random().toString(36).substring(2, 8).toUpperCase();
-
-                document.getElementById('order-number').textContent = orderNumber;
-                document.getElementById('success-name').textContent = firstName + ' ' + lastName;
-                document.getElementById('success-email').textContent = email;
-                document.getElementById('success-total').textContent = `R$ ${total.toLocaleString('pt-BR', {minimumFractionDigits: 2})}`;
-
-                showPage('success-page');
-                btn.disabled = false;
-                btn.textContent = 'FINALIZAR COMPRA';
-            }, 1500);
+            showPage('success-page');
         }
 
         function resetStore() {
             cart = [];
             updateCartCount();
-            document.querySelectorAll('input').forEach(input => input.value = '');
-            document.querySelectorAll('select').forEach(select => select.value = '');
             goToLanding();
         }
 
-        // GALERIA DE FOTOS - Mudar imagem ao clicar na miniatura
-        function changeImage(imageSrc, element) {
-            document.getElementById('mainImage').src = imageSrc;
-            document.getElementById('zoomImage').src = imageSrc;
-            
-            // Remove a classe active de todas as miniaturas
-            document.querySelectorAll('.gallery-thumbnail').forEach(thumb => {
-                thumb.classList.remove('active');
+        function changeImage(src, element) {
+            document.querySelectorAll('.gallery-thumbnail').forEach(el => {
+                el.classList.remove('active');
             });
-            
-            // Adiciona a classe active à miniatura clicada
             element.classList.add('active');
-        }
-
-        // GALERIA - Efeito de zoom ao passar o mouse
-        document.addEventListener('DOMContentLoaded', function() {
-            const galleryMain = document.getElementById('galleryMain');
-            const mainImage = document.getElementById('mainImage');
-            const zoomLens = document.querySelector('.zoom-lens');
-            const zoomResult = document.querySelector('.zoom-result');
-            const zoomImage = document.getElementById('zoomImage');
-
-            if (galleryMain && zoomLens && zoomResult && zoomImage) {
-                galleryMain.addEventListener('mouseenter', function() {
-                    zoomLens.style.display = 'block';
-                    zoomResult.style.display = 'block';
-                });
-
-                galleryMain.addEventListener('mousemove', function(e) {
-                    const rect = galleryMain.getBoundingClientRect();
-                    const x = e.clientX - rect.left;
-                    const y = e.clientY - rect.top;
-
-                    // Posiciona a lupa
-                    const lensX = x - zoomLens.offsetWidth / 2;
-                    const lensY = y - zoomLens.offsetHeight / 2;
-
-                    zoomLens.style.left = Math.max(0, Math.min(lensX, rect.width - zoomLens.offsetWidth)) + 'px';
-                    zoomLens.style.top = Math.max(0, Math.min(lensY, rect.height - zoomLens.offsetHeight)) + 'px';
-
-                    // Posiciona o zoom-result ao lado do cursor
-                    zoomResult.style.left = (rect.right + 20) + 'px';
-                    zoomResult.style.top = (rect.top + window.scrollY) + 'px';
-
-                    // Calcula o zoom
-                    const zoomLevel = 2;
-                    const offsetX = (x / rect.width) * 100;
-                    const offsetY = (y / rect.height) * 100;
-
-                    zoomImage.style.transform = `scale(${zoomLevel})`;
-                    zoomImage.style.transformOrigin = `${offsetX}% ${offsetY}%`;
-                });
-
-                galleryMain.addEventListener('mouseleave', function() {
-                    zoomLens.style.display = 'none';
-                    zoomResult.style.display = 'none';
-                });
-            }
-        });
-
-        // VÍDEOS - Reprodução inline na página
-        document.addEventListener('DOMContentLoaded', function() {
-            document.querySelectorAll('.video-player').forEach(video => {
-                video.addEventListener('play', function() {
-                    // Pausa todos os outros vídeos quando um começa a tocar
-                    document.querySelectorAll('.video-player').forEach(v => {
-                        if (v !== this) {
-                            v.pause();
-                        }
-                    });
-                });
-            });
-        });
-
-        function downloadFile(filename) {
-            alert(`Download iniciado: ${filename}\n\nNota: Este é um exemplo. Em produção, isso baixaria o arquivo real.`);
+            document.getElementById('mainImage').src = src;
+            document.getElementById('zoomImage').src = src;
         }
 
         function scrollToSection(sectionId) {
@@ -2663,22 +2289,6 @@
                 element.scrollIntoView({ behavior: 'smooth' });
             }
         }
-
-        // Fechar modal ao clicar fora
-        window.onclick = function(event) {
-            const modal = document.getElementById('videoModal');
-            if (event.target === modal) {
-                closeModal();
-            }
-        }
-
-        // Fechar modal com ESC
-        document.addEventListener('keydown', function(event) {
-            if (event.key === 'Escape') {
-                closeModal();
-            }
-        });
     </script>
-
 </body>
 </html>
