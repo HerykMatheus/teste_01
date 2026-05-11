@@ -1337,6 +1337,496 @@
             background-color: #1d4ed8;
         }
 
+        /* PÁGINA DE AVALIAÇÃO */
+        .rating-page {
+            padding: 40px 0;
+        }
+
+        .rating-container {
+            background: white;
+            border-radius: 12px;
+            padding: 48px;
+            max-width: 600px;
+            margin: 0 auto;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+        }
+
+        .rating-page-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .rating-page-header h2 {
+            font-size: 28px;
+            font-weight: bold;
+            color: #000;
+            margin-bottom: 12px;
+        }
+
+        .rating-page-header p {
+            font-size: 16px;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .rating-form {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .form-section {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .form-section label {
+            font-size: 14px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .star-rating {
+            display: flex;
+            gap: 12px;
+            font-size: 32px;
+            cursor: pointer;
+        }
+
+        .star {
+            color: #ddd;
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+
+        .star:hover,
+        .star.active {
+            color: #ffc107;
+            transform: scale(1.2);
+        }
+
+        .rating-value {
+            text-align: center;
+            font-size: 14px;
+            color: #666;
+            min-height: 20px;
+        }
+
+        .form-section textarea {
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+            font-family: inherit;
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-section input[type="text"],
+        .form-section input[type="email"] {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+        }
+
+        .checkbox-group label {
+            margin: 0;
+            font-size: 14px;
+            cursor: pointer;
+            color: #666;
+        }
+
+        .rating-buttons {
+            display: flex;
+            gap: 12px;
+            margin-top: 24px;
+        }
+
+        .btn-submit-rating {
+            flex: 1;
+            padding: 14px;
+            background-color: #059669;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .btn-submit-rating:hover {
+            background-color: #047857;
+        }
+
+        .btn-skip-rating {
+            flex: 1;
+            padding: 14px;
+            background-color: #e5e7eb;
+            color: #333;
+            border: none;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .btn-skip-rating:hover {
+            background-color: #d1d5db;
+        }
+
+        .rating-success {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .rating-success-icon {
+            font-size: 64px;
+            color: #059669;
+            margin-bottom: 16px;
+        }
+
+        .rating-success h3 {
+            font-size: 24px;
+            font-weight: bold;
+            color: #000;
+            margin-bottom: 12px;
+        }
+
+        .rating-success p {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 24px;
+        }
+
+        /* PÁGINA DE ACOMPANHAMENTO DE ENTREGA */
+        .tracking-page {
+            margin: 0;
+            padding: 0;
+            background: #d8d8d8;
+            min-height: 100vh;
+        }
+
+        .tracking-topbar {
+            background: #0b86f4;
+            color: white;
+            height: 108px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            font-weight: 600;
+            position: relative;
+        }
+
+        .tracking-back {
+            position: absolute;
+            left: 22px;
+            font-size: 34px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-weight: 300;
+            cursor: pointer;
+            color: white;
+        }
+
+        .tracking-wrapper {
+            max-width: 710px;
+            margin: 34px auto;
+            padding: 0 14px;
+        }
+
+        .tracking-card {
+            background: #fff;
+            border-radius: 18px;
+            padding: 28px 28px 10px;
+        }
+
+        .tracking-title {
+            color: #0b86f4;
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .tracking-subtitle {
+            font-size: 18px;
+            margin-bottom: 26px;
+            color: #555;
+        }
+
+        .tracking-subtitle strong {
+            color: #666;
+        }
+
+        .tracking-divider {
+            height: 1px;
+            background: #e3e3e3;
+            margin-bottom: 10px;
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 100px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        .timeline::before {
+            content: "";
+            position: absolute;
+            left: 50px;
+            top: 0;
+            bottom: 0;
+            width: 8px;
+            background: #d3d3d3;
+            border-radius: 4px;
+            z-index: 1;
+        }
+
+        .timeline::after {
+            content: "";
+            position: absolute;
+            left: 50px;
+            top: 0;
+            width: 8px;
+            background: #0b86f4;
+            border-radius: 4px;
+            z-index: 2;
+            animation: fillTimeline 15s ease-out forwards;
+        }
+
+        @keyframes fillTimeline {
+            0% { height: 0%; }
+            100% { height: 100%; }
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 28px;
+            padding-left: 0;
+            opacity: 1;
+            animation: none;
+        }
+
+        .timeline-item:nth-child(1) { animation-delay: 0.2s; }
+        .timeline-item:nth-child(2) { animation-delay: 0.4s; }
+        .timeline-item:nth-child(3) { animation-delay: 0.6s; }
+        .timeline-item:nth-child(4) { animation-delay: 0.8s; }
+        .timeline-item:nth-child(5) { animation-delay: 1s; }
+        .timeline-item:nth-child(6) { animation-delay: 1.2s; }
+        .timeline-item:nth-child(7) { animation-delay: 1.4s; }
+        .timeline-item:nth-child(8) { animation-delay: 1.6s; }
+        .timeline-item:nth-child(9) { animation-delay: 1.8s; }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: -58px;
+            top: 10px;
+            width: 24px;
+            height: 24px;
+            background: white;
+            border: 3px solid #d3d3d3;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0;
+            color: #d3d3d3;
+            box-shadow: 0 0 0 2px white;
+            animation: none;
+            z-index: 3;
+        }
+
+        .timeline-item.completed .timeline-dot {
+            background: #0b86f4;
+            border-color: #0b86f4;
+            color: white;
+            animation: none;
+        }
+
+        .timeline-item.active .timeline-dot {
+            background: #0b86f4;
+            border-color: #0b86f4;
+            color: white;
+            box-shadow: 0 0 0 2px white;
+            animation: none;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                box-shadow: 0 0 0 0 rgba(11, 134, 244, 0.7);
+            }
+            50% {
+                box-shadow: 0 0 0 8px rgba(11, 134, 244, 0);
+            }
+        }
+
+        .timeline-content {
+            background: transparent;
+            padding: 0;
+            border: none;
+            display: block;
+        }
+
+        .timeline-item.completed .timeline-content {
+            border: none;
+            background: transparent;
+        }
+
+        .timeline-item.active .timeline-content {
+            border: none;
+            background: transparent;
+            box-shadow: none;
+        }
+
+        .timeline-time {
+            font-size: 13px;
+            color: #999;
+            font-weight: 400;
+            text-transform: none;
+            margin-bottom: 4px;
+        }
+
+        .timeline-title {
+            font-size: 15px;
+            font-weight: 500;
+            color: #0b86f4;
+            margin-bottom: 0;
+            line-height: 1.4;
+        }
+
+        .timeline-description {
+            font-size: 13px;
+            color: #0b86f4;
+            line-height: 1.4;
+            display: none;
+        }
+
+        .timeline-description a {
+            color: #0b86f4;
+            text-decoration: underline;
+            font-weight: 500;
+            cursor: pointer;
+        }
+
+        .timeline-description a:hover {
+            text-decoration: none;
+        }
+
+        .tracking-actions {
+            display: none;
+            gap: 12px;
+            margin-top: 32px;
+            padding-top: 24px;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        .btn-tracking {
+            flex: 1;
+            padding: 12px 16px;
+            border: none;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .btn-tracking-primary {
+            background-color: #0b86f4;
+            color: white;
+        }
+
+        .btn-tracking-primary:hover {
+            background-color: #0a6fd8;
+        }
+
+        .btn-tracking-secondary {
+            background-color: #e5e7eb;
+            color: #333;
+        }
+
+        .btn-tracking-secondary:hover {
+            background-color: #d1d5db;
+        }
+
+        .delivery-status {
+            display: none;
+            text-align: center;
+            padding: 24px;
+            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+            border-radius: 8px;
+            margin-top: 24px;
+            border: 2px solid #86efac;
+        }
+
+        .delivery-status.in-transit {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            border-color: #06b6d4;
+        }
+
+        .delivery-status-icon {
+            font-size: 32px;
+            margin-bottom: 8px;
+        }
+
+        .delivery-status-text {
+            font-size: 16px;
+            font-weight: bold;
+            color: #059669;
+            margin-bottom: 4px;
+        }
+
+        .delivery-status.in-transit .delivery-status-text {
+            color: #0b86f4;
+        }
+
+        .delivery-status-subtext {
+            font-size: 13px;
+            color: #666;
+        }
+
+        .timeline-item {
+            margin-bottom: 32px;
+        }
+
+        .timeline-dot {
+            width: 24px;
+            height: 24px;
+            font-size: 12px;
+        }
+
+        .tracking-page .navbar {
+            display: none;
+        }
+
         @media (max-width: 768px) {
             .hero-content,
             .specs-grid,
@@ -1382,6 +1872,14 @@
             .gallery-container {
                 grid-template-columns: 1fr;
                 gap: 20px;
+            }
+
+            .tracking-container {
+                padding: 24px;
+            }
+
+            .tracking-header h2 {
+                font-size: 22px;
             }
         }
     </style>
@@ -2098,7 +2596,163 @@
                 </div>
 
                 <div class="success-buttons">
+                    <button class="btn-continue" onclick="goToRating()">AVALIAR PRODUTO</button>
+                    <button class="btn-continue" style="background-color: #6b7280;" onclick="resetStore()">VOLTAR PARA A LOJA</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="page" id="rating-page">
+        <div class="container rating-page">
+            <div class="rating-container" id="rating-form-container">
+                <div class="rating-page-header">
+                    <h2>Avalie o Produto</h2>
+                    <p>Sua opinião é muito importante para nós e ajuda outros clientes a tomar melhores decisões.</p>
+                </div>
+
+                <form class="rating-form" onsubmit="submitRating(event)">
+                    <div class="form-section">
+                        <label>Como você avalia o produto?</label>
+                        <div class="star-rating" id="star-rating">
+                            <span class="star" data-value="1" onclick="setRating(1)">★</span>
+                            <span class="star" data-value="2" onclick="setRating(2)">★</span>
+                            <span class="star" data-value="3" onclick="setRating(3)">★</span>
+                            <span class="star" data-value="4" onclick="setRating(4)">★</span>
+                            <span class="star" data-value="5" onclick="setRating(5)">★</span>
+                        </div>
+                        <div class="rating-value" id="rating-value"></div>
+                    </div>
+
+                    <div class="form-section">
+                        <label for="review-title">Título da Avaliação *</label>
+                        <input type="text" id="review-title" placeholder="Ex: Excelente qualidade!" required>
+                    </div>
+
+                    <div class="form-section">
+                        <label for="review-text">Sua Avaliação *</label>
+                        <textarea id="review-text" placeholder="Conte-nos sua experiência com o produto..." required></textarea>
+                    </div>
+
+                    <div class="form-section">
+                        <label for="reviewer-name">Seu Nome (opcional)</label>
+                        <input type="text" id="reviewer-name" placeholder="Como você gostaria de aparecer">
+                    </div>
+
+                    <div class="form-section">
+                        <label for="reviewer-email">Seu E-mail (opcional)</label>
+                        <input type="email" id="reviewer-email" placeholder="seu.email@exemplo.com">
+                    </div>
+
+                    <div class="form-section">
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="recommend-product" checked>
+                            <label for="recommend-product">Eu recomendo este produto</label>
+                        </div>
+                    </div>
+
+                    <div class="rating-buttons">
+                        <button type="submit" class="btn-submit-rating">ENVIAR AVALIAÇÃO</button>
+                        <button type="button" class="btn-skip-rating" onclick="skipRating()">PULAR</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="rating-container" id="rating-success-container" style="display: none;">
+                <div class="rating-success">
+                    <div class="rating-success-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Obrigado pela Avaliação!</h3>
+                    <p>Sua avaliação foi registrada com sucesso e será exibida em breve após moderação.</p>
                     <button class="btn-continue" onclick="resetStore()">VOLTAR PARA A LOJA</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="page" id="tracking-page">
+        <div class="tracking-topbar">
+            <span class="tracking-back" onclick="resetStore()"><i class="fas fa-chevron-left"></i></span>
+            <span>Meus pedidos</span>
+        </div>
+        <div class="tracking-wrapper">
+            <div class="tracking-card">
+                <div class="tracking-title">Entrega</div>
+                <div class="tracking-subtitle"><strong>Entregue por Magazine Luiza</strong></div>
+                <div class="tracking-divider"></div>
+                <div class="timeline" id="timeline">
+                    <div class="timeline-item completed">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-time">15/03/2026 às 11:15</div>
+                            <div class="timeline-title">Recebemos seu Pedido</div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item completed">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-time">15/03/2026 às 11:22</div>
+                            <div class="timeline-title">O seu pagamento foi aprovado!</div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item completed">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-time">15/03/2026 às 11:23</div>
+                            <div class="timeline-title">O seu pedido está sendo preparado para envio</div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item completed">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-time">20/03/2026 às 14:32</div>
+                            <div class="timeline-title">Sua Nota Fiscal foi emitida <a href="#">Aqui está ela!</a></div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item completed">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-time">20/03/2026 às 14:32</div>
+                            <div class="timeline-title">Sua Nota Fiscal foi emitida</div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item completed">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-time">20/03/2026 às 22:59</div>
+                            <div class="timeline-title">Seu produto já esta com a transportadora responsável pela entrega :) <a href="#">Acompanhe a entrega aqui :)</a></div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item completed">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-time">23/03/2026 às 10:05</div>
+                            <div class="timeline-title">O seu pedido está em processo de separação, etiquetagem e embalagem na filial da transportadora</div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item active">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-time">24/03/2026 às 07:07</div>
+                            <div class="timeline-title">Seu produto está em rota de entrega.</div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-time">24/03/2026 às 12:22</div>
+                            <div class="timeline-title">Seu produto foi entregue!</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -2110,7 +2764,7 @@
             name: "Lava e Seca LG ThinQ Branca 10,5kg - Inteligente com IA",
             price: 3899.00,
             originalPrice: 5499.00,
-            image: "https://images.unsplash.com/photo-1517668808822-9ebb02ae2a0e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+            image: "01.jpeg"
         };
 
         let cart = [];
@@ -2266,12 +2920,138 @@
             document.getElementById('success-total').textContent = `R$ ${total.toLocaleString('pt-BR', {minimumFractionDigits: 2})}`;
 
             showPage('success-page');
+            
+            // Adicionar botão para acompanhar entrega
+            const successButtons = document.querySelector('.success-buttons');
+            if (successButtons && !document.getElementById('track-btn')) {
+                const trackBtn = document.createElement('button');
+                trackBtn.id = 'track-btn';
+                trackBtn.className = 'btn-continue';
+                trackBtn.style.backgroundColor = '#0284c7';
+                trackBtn.textContent = 'ACOMPANHAR ENTREGA';
+                trackBtn.onclick = goToTracking;
+                successButtons.insertBefore(trackBtn, successButtons.firstChild);
+            }
         }
 
         function resetStore() {
             cart = [];
             updateCartCount();
             goToLanding();
+        }
+
+        function goToRating() {
+            showPage('rating-page');
+            resetRatingForm();
+        }
+
+        function setRating(value) {
+            const stars = document.querySelectorAll('#star-rating .star');
+            stars.forEach((star, index) => {
+                if (index < value) {
+                    star.classList.add('active');
+                } else {
+                    star.classList.remove('active');
+                }
+            });
+            
+            const ratingTexts = ['Péssimo', 'Ruim', 'Bom', 'Muito Bom', 'Excelente'];
+            document.getElementById('rating-value').textContent = ratingTexts[value - 1];
+            document.getElementById('rating-value').style.color = '#ffc107';
+            document.getElementById('rating-value').style.fontWeight = 'bold';
+            
+            window.currentRating = value;
+        }
+
+        function resetRatingForm() {
+            document.getElementById('review-title').value = '';
+            document.getElementById('review-text').value = '';
+            document.getElementById('reviewer-name').value = '';
+            document.getElementById('reviewer-email').value = '';
+            document.getElementById('recommend-product').checked = true;
+            
+            const stars = document.querySelectorAll('#star-rating .star');
+            stars.forEach(star => star.classList.remove('active'));
+            document.getElementById('rating-value').textContent = '';
+            
+            window.currentRating = 0;
+            
+            document.getElementById('rating-form-container').style.display = 'block';
+            document.getElementById('rating-success-container').style.display = 'none';
+        }
+
+        function submitRating(event) {
+            event.preventDefault();
+            
+            if (window.currentRating === 0) {
+                alert('Por favor, selecione uma classificação em estrelas');
+                return;
+            }
+            
+            const title = document.getElementById('review-title').value;
+            const text = document.getElementById('review-text').value;
+            const name = document.getElementById('reviewer-name').value || 'Cliente Anônimo';
+            const email = document.getElementById('reviewer-email').value;
+            const recommend = document.getElementById('recommend-product').checked;
+            
+            // Aqui você poderia enviar os dados para um servidor
+            console.log({
+                rating: window.currentRating,
+                title: title,
+                text: text,
+                name: name,
+                email: email,
+                recommend: recommend,
+                productId: product.id,
+                timestamp: new Date().toISOString()
+            });
+            
+            // Mostrar mensagem de sucesso
+            document.getElementById('rating-form-container').style.display = 'none';
+            document.getElementById('rating-success-container').style.display = 'block';
+        }
+
+        function skipRating() {
+            goToTracking();
+        }
+
+        function goToTracking() {
+            showPage('tracking-page');
+            initializeTracking();
+        }
+
+        function initializeTracking() {
+            // Simular progresso da entrega
+            simulateDeliveryProgress();
+        }
+
+        function simulateDeliveryProgress() {
+            let currentStep = 7; // Começar no passo 7 (Em Rota de Entrega)
+            const timelineItems = document.querySelectorAll('#timeline .timeline-item');
+            const totalSteps = timelineItems.length;
+
+            // Função para atualizar o status
+            function updateStep() {
+                timelineItems.forEach((item, index) => {
+                    item.classList.remove('active', 'completed');
+                    if (index < currentStep) {
+                        item.classList.add('completed');
+                    } else if (index === currentStep) {
+                        item.classList.add('active');
+                    }
+                });
+            }
+
+            // Atualizar a cada 15 segundos (mais lento ainda)
+            updateStep();
+            const interval = setInterval(() => {
+                if (currentStep < totalSteps - 1) {
+                    currentStep++;
+                    updateStep();
+                } else {
+                    clearInterval(interval);
+                }
+            }, 15000);
         }
 
         function changeImage(src, element) {
